@@ -1,0 +1,38 @@
+{
+  "name": "wc-design",
+  "version": "0.0.1",
+  "main": "index.js",
+  "repository": "git@github.com:wc-design/wc-design.git",
+  "author": "zh-lx <18366276315@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "commitizen": "^4.2.5",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^8.26.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "husky": "^8.0.1",
+    "lerna": "^5.2.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "typescript": "^4.8.4"
+  },
+  "lint-staged": {
+    "**/*.{jsx,txs,ts,js,vue}": [
+      "eslint --fix",
+      "git add"
+    ]
+  },
+  "scripts": {
+    "prepare": "npx husky install",
+    "commit": "git add . && git-cz"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
