@@ -5,6 +5,7 @@
   "repository": "git@github.com:wc-design/wc-design.git",
   "author": "zh-lx <18366276315@163.com>",
   "license": "MIT",
+  "private": true,
   "devDependencies": {
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
