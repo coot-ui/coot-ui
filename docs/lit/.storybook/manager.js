@@ -3,7 +3,7 @@ import { addons } from '@storybook/addons';
 addons.setConfig({
   isFullscreen: false,
   showNav: true,
-  showPanel: true,
+  showPanel: false,
   panelPosition: 'bottom',
   enableShortcuts: true,
   showToolbar: true,
@@ -15,8 +15,8 @@ addons.setConfig({
     collapsedRoots: ['other'],
   },
   toolbar: {
-    title: { hidden: true },
-    zoom: { hidden: true },
+    title: { hidden: false },
+    zoom: { hidden: false },
     eject: { hidden: true },
     copy: { hidden: true },
     fullscreen: { hidden: true },
