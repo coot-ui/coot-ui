@@ -2,8 +2,8 @@ import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { styleMap } from 'lit-html/directives/style-map.js';
 
-@customElement('wc-icon')
-export class WcIcon extends LitElement {
+@customElement('coot-icon')
+export class CootIcon extends LitElement {
   @property({ type: Number })
   size: number = 24;
 

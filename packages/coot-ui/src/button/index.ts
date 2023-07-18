@@ -1,11 +1,11 @@
-import { LitElement, css, html } from 'lit';
+import { LitElement, html } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { ButtonType, ButtonStatus } from './type';
 import { styleList } from './style';
 
-@customElement('wc-button')
-export class WcButton extends LitElement {
+@customElement('coot-button')
+export class CootButton extends LitElement {
   @property({ type: String })
   type: ButtonType = 'default';
 

@@ -1,12 +1,12 @@
 import { html } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { WcIcon } from '../components/wc-icon';
+import { CootIcon } from '../components/coot-icon';
 
-@customElement('wc-icon-ancient-gate-fill')
-export class WcIconAncientGateFill extends WcIcon {
+@customElement('coot-icon-ancient-gate-fill')
+export class WcIconAncientGateFill extends CootIcon {
   render() {
     console.log(this.styles, this.color);
-    return html`<wc-icon size=${this.size} color=${this.color}>
+    return html`<coot-icon size=${this.size} color=${this.color}>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
         <g>
           <path fill="none" d="M0 0h24v24H0z" />
@@ -16,6 +16,6 @@ export class WcIconAncientGateFill extends WcIcon {
           />
         </g>
       </svg>
-    </wc-icon>`;
+    </coot-icon>`;
   }
 }

@@ -1,1 +1,1 @@
-# wc-design
+# coot-ui
