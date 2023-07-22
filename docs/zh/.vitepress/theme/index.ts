@@ -3,6 +3,8 @@ import { h } from 'vue';
 import Theme from 'vitepress/theme';
 // import HomeHeroAfter from '../components/home-hero-after.vue';
 import './style.css';
+import { VitepressDemoBox } from 'vitepress-demo-box';
+import 'vitepress-demo-box/dist/style.css';
 
 export default {
   ...Theme,
@@ -14,5 +16,6 @@ export default {
   },
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.component('demo-box', VitepressDemoBox);
   },
 };

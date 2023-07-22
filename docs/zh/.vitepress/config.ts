@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import { markdownDemo } from 'vitepress-demo-box';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -44,6 +45,11 @@ export default defineConfig({
       label: 'English',
       lang: 'en',
       link: 'https://en.inspector.fe-dev.cn', // default /fr/ -- shows on navbar translations menu, can be external
+    },
+  },
+  markdown: {
+    config(md) {
+      md.use(markdownDemo);
     },
   },
 });
