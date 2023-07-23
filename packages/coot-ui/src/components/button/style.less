@@ -1,0 +1,91 @@
+@import '../../styles/index.less';
+
+@button-status: primary, success, danger, warning;
+@button-type: primary, outline, dashed, link, text;
+
+#ns.b(button, {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: @common-size;
+  border: 1px solid @button-border;
+  border-radius: @common-radius;
+  background-color: transparent;
+  color: @color-text-main;
+  padding-left: calc(@size-4 - 1px);
+  padding-right: calc(@size-4 - 1px);
+  cursor: pointer;
+  font-size: 14px;
+
+  &:hover {
+    color: @primary-hover;
+    border-color: @primary-hover;
+  }
+  &:active {
+    color: @primary-active;
+    border-color: @primary-active;
+  }
+
+  // type
+  each(@button-type, {
+    #ns.m(~'type-@{value}' , {
+      color: @primary;
+      border-color: @primary;
+    })
+  });
+  #ns.m(~'type-dashed' , {
+    border-style: dashed;
+  });
+  #ns.m(~'type-link' , {
+    border-style: none;
+  });
+  #ns.m(~'type-text' , {
+    border-style: none;
+    &:hover {
+      background-color: ~'var(--@{prefix}-color-lighter)';
+      border-color: ~'var(--@{prefix}-color-lighter)';
+    }
+    &:active {
+      background-color: ~'var(--@{prefix}-color-light)';
+      border-color: ~'var(--@{prefix}-color-light)';
+    }
+  });
+
+  // status
+  each(@button-status, {
+    #ns.m(~'status-@{value}' , {
+      color: ~'var(--@{prefix}-@{value})';
+      border-color: ~'var(--@{prefix}-@{value})';
+      &.@{prefix}-button--type-default {
+        color: @color-text-main;
+        border-color:@button-border;
+      }
+      &:hover {
+        color: ~'var(--@{prefix}-@{value}-hover)';
+        border-color: ~'var(--@{prefix}-@{value}-hover)';
+      }
+      &:active {
+        color: ~'var(--@{prefix}-@{value}-active)';
+        border-color: ~'var(--@{prefix}-@{value}-active)';
+      }
+    })
+  });
+
+  #ns.m(~'type-primary' , {
+    each(@button-status, {
+      &.@{prefix}-button--status-@{value} {
+        color: white;
+        background-color: ~'var(--@{prefix}-@{value})';
+        &:hover {
+          background-color: ~'var(--@{prefix}-@{value}-hover)';
+          color: white;
+        }
+        &:active {
+          background-color: ~'var(--@{prefix}-@{value}-active)';
+          color: white;
+        }
+      }
+    })
+  });
+});

@@ -1,0 +1,31 @@
+@import './var.less';
+
+#ns {
+  .b(@block; @content) {
+    .@{prefix}-@{block} {
+      box-sizing: border-box;
+      font-family: @font-family;
+      @content();
+    }
+  }
+  .e(@element; @content) {
+    &__@{element} {
+      @content();
+    }
+  }
+  .m(@modifier; @content) {
+    &--@{modifier} {
+      @content();
+    }
+  }
+  .bm(@block; @modifier; @content) {
+    .@{prefix}-@{block}--@{modifier} {
+      @content();
+    }
+  }
+  .be(@block; @element; @content) {
+    .@{prefix}-@{block}__@{element} {
+      @content();
+    }
+  }
+}

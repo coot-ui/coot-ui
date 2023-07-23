@@ -1,8 +1,12 @@
-import { LitElement, html } from 'lit';
+import { LitElement, html, unsafeCSS, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
+
+import { useNamespace } from '../../utils';
+
+import styles from './style.less?inline';
+
 import { ButtonType, ButtonStatus } from './type';
-import { styleList } from './style';
 
 @customElement('coot-button')
 export class CootButton extends LitElement {
@@ -10,12 +14,14 @@ export class CootButton extends LitElement {
   type: ButtonType = 'default';
 
   @property({ type: String })
-  status: ButtonStatus = 'default';
+  status: ButtonStatus = 'primary';
+
+  ns = useNamespace('button');
 
   classes = () => ({
-    'wc-button': true,
-    [`wc-button-type-${this.type}`]: true,
-    [`wc-button-status-${this.status}`]: true,
+    [this.ns.b()]: true,
+    [this.ns.m(`type-${this.type}`)]: true,
+    [this.ns.m(`status-${this.status}`)]: true,
   });
 
   render() {
@@ -24,5 +30,7 @@ export class CootButton extends LitElement {
     </button>`;
   }
 
-  static styles = styleList;
+  static styles = css`
+    ${unsafeCSS(styles)}
+  `;
 }

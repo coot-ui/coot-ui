@@ -1,0 +1,13 @@
+# 按钮
+
+## 按钮种类
+
+通过 `type` 属性设置不同种类的按钮。
+
+<demo path="../demos/button/type.vue"></demo>
+
+## 按钮状态
+
+通过 `status` 属性设置按钮不同状态。
+
+<demo path="../demos/button/status.vue"></demo>

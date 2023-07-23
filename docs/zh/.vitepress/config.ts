@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
 import { markdownDemo } from 'vitepress-demo-box';
+import path from 'path';
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -22,6 +23,10 @@ export default defineConfig({
           { text: '指定 IDE', link: '/guide/ide' },
           { text: 'API', link: '/guide/api' },
         ],
+      },
+      {
+        text: '通用',
+        items: [{ text: 'Button 按钮', link: '/components/button.md' }],
       },
       {
         text: '更多',
@@ -50,6 +55,16 @@ export default defineConfig({
   markdown: {
     config(md) {
       md.use(markdownDemo);
+    },
+  },
+  vite: {
+    resolve: {
+      alias: {
+        '@coot-ui': path.relative(
+          __dirname,
+          '../../../packages/coot-ui/src/components'
+        ),
+      },
     },
   },
 });
