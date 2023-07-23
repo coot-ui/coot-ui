@@ -3,35 +3,57 @@
 @button-status: primary, success, danger, warning;
 @button-type: primary, outline, dashed, link, text;
 
+:host {
+  --button-primary: ~'var(--@{prefix}-primary)';
+  --button-primary-hover: ~'var(--@{prefix}-primary-hover)';
+  --button-primary-active: ~'var(--@{prefix}-primary-active)';
+  --button-primary-disable: ~'var(--@{prefix}-primary-disable)';
+
+  --button-success: ~'var(--@{prefix}-success)';
+  --button-success-hover: ~'var(--@{prefix}-success-hover)';
+  --button-success-active: ~'var(--@{prefix}-success-active)';
+  --button-success-disable: ~'var(--@{prefix}-success-disable)';
+
+  --button-danger: ~'var(--@{prefix}-danger)';
+  --button-danger-hover: ~'var(--@{prefix}-danger-hover)';
+  --button-danger-active: ~'var(--@{prefix}-danger-active)';
+  --button-danger-disable: ~'var(--@{prefix}-danger-disable)';
+
+  --button-warning: ~'var(--@{prefix}-warning)';
+  --button-warning-hover: ~'var(--@{prefix}-warning-hover)';
+  --button-warning-active: ~'var(--@{prefix}-warning-active)';
+  --button-warning-disable: ~'var(--@{prefix}-warning-disable)';
+
+  --button-text-color: ~'var(--@{prefix}-color-text-main)';
+  --button-text-hover-color: ~'var(--@{prefix}-color-lighter)';
+  --button-text-active-color: ~'var(--@{prefix}-color-light)';
+  --button-border: ~'var(--@{prefix}-gray-4)';
+  --button-radius: ~'var(--@{prefix}-common-radius)';
+  --button-font-size: ~'var(--@{prefix}-common-font-size)';
+  --button-height: ~'var(--@{prefix}-common-size)';
+  --button-horizontal-padding: calc(~'var(--@{prefix}-common-size-4)' - 1px);
+}
+
 #ns.b(button, {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  height: @common-size;
-  border: 1px solid @button-border;
-  border-radius: @common-radius;
+  height: var(--button-height);
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-radius);
   background-color: transparent;
-  color: @color-text-main;
-  padding-left: calc(@size-4 - 1px);
-  padding-right: calc(@size-4 - 1px);
+  color: var(--button-text-color);
+  padding-left: var(--button-horizontal-padding);
+  padding-right: var(--button-horizontal-padding);
   cursor: pointer;
-  font-size: 14px;
-
-  &:hover {
-    color: @primary-hover;
-    border-color: @primary-hover;
-  }
-  &:active {
-    color: @primary-active;
-    border-color: @primary-active;
-  }
+  font-size: var(--button-font-size)
 
   // type
   each(@button-type, {
     #ns.m(~'type-@{value}' , {
-      color: @primary;
-      border-color: @primary;
+      color: var(--button-primary);
+      border-color: var(--button-primary);
     })
   });
   #ns.m(~'type-dashed' , {
@@ -43,31 +65,31 @@
   #ns.m(~'type-text' , {
     border-style: none;
     &:hover {
-      background-color: ~'var(--@{prefix}-color-lighter)';
-      border-color: ~'var(--@{prefix}-color-lighter)';
+      background-color: var(--button-text-hover-color);
+      border-color: var(--button-text-hover-color);
     }
     &:active {
-      background-color: ~'var(--@{prefix}-color-light)';
-      border-color: ~'var(--@{prefix}-color-light)';
+      background-color: var(--button-text-active-color);
+      border-color: var(--button-text-active-color);
     }
   });
 
   // status
   each(@button-status, {
     #ns.m(~'status-@{value}' , {
-      color: ~'var(--@{prefix}-@{value})';
-      border-color: ~'var(--@{prefix}-@{value})';
+      color: ~'var(--button-@{value})';
+      border-color: ~'var(--button-@{value})';
       &.@{prefix}-button--type-default {
-        color: @color-text-main;
-        border-color:@button-border;
+        color: var(--button-text-color);
+        border-color: var(--button-border);
       }
       &:hover {
-        color: ~'var(--@{prefix}-@{value}-hover)';
-        border-color: ~'var(--@{prefix}-@{value}-hover)';
+        color: ~'var(--button-@{value}-hover)';
+        border-color: ~'var(--button-@{value}-hover)';
       }
       &:active {
-        color: ~'var(--@{prefix}-@{value}-active)';
-        border-color: ~'var(--@{prefix}-@{value}-active)';
+        color: ~'var(--button-@{value}-active)';
+        border-color: ~'var(--button-@{value}-active)';
       }
     })
   });
@@ -76,13 +98,13 @@
     each(@button-status, {
       &.@{prefix}-button--status-@{value} {
         color: white;
-        background-color: ~'var(--@{prefix}-@{value})';
+        background-color: ~'var(--button-@{value})';
         &:hover {
-          background-color: ~'var(--@{prefix}-@{value}-hover)';
+          background-color: ~'var(--button-@{value}-hover)';
           color: white;
         }
         &:active {
-          background-color: ~'var(--@{prefix}-@{value}-active)';
+          background-color: ~'var(--button-@{value}-active)';
           color: white;
         }
       }

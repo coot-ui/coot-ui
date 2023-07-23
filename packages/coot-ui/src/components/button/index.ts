@@ -25,7 +25,7 @@ export class CootButton extends LitElement {
   });
 
   render() {
-    return html`<button class=${classMap(this.classes())}>
+    return html`<button class=${classMap(this.classes())} part=${this.ns.b()}>
       <slot></slot>
     </button>`;
   }
