@@ -3,8 +3,9 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 
 import { useNamespace } from '../../utils';
+import type { ComponentSize } from '../../constant';
 
-import styles from './style.less?inline';
+import styles from './style.scss?inline';
 
 import { ButtonType, ButtonStatus } from './type';
 
@@ -16,12 +17,20 @@ export class CootButton extends LitElement {
   @property({ type: String })
   status: ButtonStatus = 'primary';
 
+  @property({ type: String })
+  size: ComponentSize = 'default';
+
+  @property({ type: Boolean })
+  round = false;
+
   ns = useNamespace('button');
 
   classes = () => ({
     [this.ns.b()]: true,
     [this.ns.m(`type-${this.type}`)]: true,
+    [this.ns.m(`size-${this.size}`)]: true,
     [this.ns.m(`status-${this.status}`)]: true,
+    [this.ns.is('round')]: this.round,
   });
 
   render() {

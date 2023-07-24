@@ -11,3 +11,9 @@
 通过 `status` 属性设置按钮不同状态。
 
 <demo path="../demos/button/status.vue"></demo>
+
+## 按钮尺寸
+
+通过 `size` 属性设置按钮不同状态。
+
+<demo path="../demos/button/size.vue"></demo>

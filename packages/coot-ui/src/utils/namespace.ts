@@ -22,12 +22,13 @@ export const useNamespace = (block: string) => {
     generateName(defaultPrefix, block, element, modifier);
   const bem = (_block?: string, element?: string, modifier?: string) =>
     generateName(defaultPrefix, _block, element, modifier);
-
+  const is = (status: string) => `${defaultPrefix}-is-${status}`;
   return {
     b,
     e,
     m,
     em,
     bem,
+    is,
   };
 };

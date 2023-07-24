@@ -1,0 +1,114 @@
+@use '../../style/mixin.scss' as *;
+@use '../../style/config.scss' as *;
+@use '../../style/var.scss' as *;
+
+$button-status: primary, success, danger, warning;
+$button-type: primary, outline, dashed, link, text;
+
+:host {
+  @each $status in $button-status {
+    --button-#{$status}: var(--#{$prefix}-#{$status});
+    --button-#{$status}-hover: var(--#{$prefix}-#{$status}-hover);
+    --button-#{$status}-active: var(--#{$prefix}-#{$status}-active);
+    --button-#{$status}-disable: var(--#{$prefix}-#{$status}-disable);
+  }
+
+  @each $size in $component-size {
+    --button-size-#{$size}: var(--#{$prefix}-height-#{$size});
+    --button-horizon-padding-#{$size}: var(
+      --#{$prefix}-horizon-padding-#{$size}
+    );
+    --button-font-size-#{$size}: var(--#{$prefix}-font-size-#{$size});
+  }
+
+  --button-text-type-color: var(--#{$prefix}-color-text-main);
+  --button-text-type-hover-bg: var(--#{$prefix}-color-lighter);
+  --button-text-type-active-bg: var(--#{$prefix}-color-light);
+  --button-border: var(--#{$prefix}-gray-4);
+  --button-radius: var(--#{$prefix}-radius);
+  --button-font-size: var(--#{$prefix}-font-size);
+  --button-font-size-mini: var(--#{$prefix}-font-size-mini);
+  --button-font-size-large: var(--#{$prefix}-font-size-large);
+}
+
+@include b(button) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid var(--button-border);
+  border-radius: var(--button-radius);
+  background-color: transparent;
+  color: var(--button-text-type-color);
+  cursor: pointer;
+
+  @each $size in $component-size {
+    @include m(size-#{$size}) {
+      height: var(--button-size-#{$size});
+      padding: 0 var(--button-horizon-padding-#{$size});
+      font-size: var(--button-font-size-#{$size});
+      &.#{$prefix}-is-round {
+        border-radius: calc(var(--button-size-#{$size}) / 2);
+      }
+    }
+  }
+
+  @each $type in $button-type {
+    @include m(type-#{$type}) {
+      color: var(--button-primary);
+      border-color: var(--button-primary);
+    }
+  }
+
+  @include m(type-dashed) {
+    border-style: dashed;
+  }
+
+  @include m(type-link) {
+    border-style: none;
+  }
+
+  @include m(type-text) {
+    border-style: none;
+    &:hover {
+      background-color: var(--button-text-type-hover-bg);
+      border-color: var(--button-text-type-hover-bg);
+    }
+    &:active {
+      background-color: var(--button-text-type-active-bg);
+      border-color: var(--button-text-type-active-bg);
+    }
+  }
+
+  @each $status in $button-status {
+    @include m(status-#{$status}) {
+      color: var(--button-#{$status});
+      border-color: var(--button-#{$status});
+      &.#{$prefix}-button--type-default {
+        color: var(--button-text-type-color);
+        border-color: var(--button-border);
+      }
+      &:hover {
+        color: var(--button-#{$status}-hover);
+        border-color: var(--button-#{$status}-hover);
+      }
+      &:active {
+        color: var(--button-#{$status}-active);
+        border-color: var(--button-#{$status}-active);
+      }
+
+      &.#{$prefix}-button--type-primary {
+        color: white;
+        background-color: var(--button-#{$status});
+        &:hover {
+          background-color: var(--button-#{$status}-hover);
+          color: white;
+        }
+        &:active {
+          background-color: var(--button-#{$status}-active);
+          color: white;
+        }
+      }
+    }
+  }
+}

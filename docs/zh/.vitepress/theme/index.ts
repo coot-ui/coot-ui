@@ -5,7 +5,7 @@ import Theme from 'vitepress/theme';
 import './style.css';
 import { VitepressDemoBox } from 'vitepress-demo-box';
 import 'vitepress-demo-box/dist/style.css';
-import '../../../../packages/coot-ui/src/styles/style.less';
+import '../../../../packages/coot-ui/src/style/var.scss';
 
 export default {
   ...Theme,
