@@ -19,11 +19,6 @@
     "skipLibCheck": true,
     "target": "ES5"
   },
-  "include": [
-    "components/**/*.ts",
-    "icons/**/*.ts",
-    "vite-env.d.ts",
-    "vite-env.d.ts"
-  ],
+  "include": ["src/**/*.ts", "icons/*.ts", "vite-env.d.ts", "vite-env.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
