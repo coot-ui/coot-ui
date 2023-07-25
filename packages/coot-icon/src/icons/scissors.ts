@@ -1,16 +1,25 @@
-import { html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-scissors')
-export class CootIconScissors extends CootIcon {
+export class CootIconScissors extends LitElement {
+
+  static styles = css`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  `;
+
   render() {
-    return html`<coot-icon size=${this.size} color=${this.color}>
-      <svg
+    return html`<svg
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
@@ -20,6 +29,6 @@ export class CootIconScissors extends CootIcon {
         <line x1="14.47" y1="14.48" x2="20" y2="20" />
         <line x1="8.12" y1="8.12" x2="12" y2="12" />
       </svg>
-    </coot-icon>`;
+       `;
   }
 }

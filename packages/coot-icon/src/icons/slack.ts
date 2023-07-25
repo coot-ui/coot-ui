@@ -1,16 +1,25 @@
-import { html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-slack')
-export class CootIconSlack extends CootIcon {
+export class CootIconSlack extends LitElement {
+
+  static styles = css`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  `;
+
   render() {
-    return html`<coot-icon size=${this.size} color=${this.color}>
-      <svg
+    return html`<svg
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
@@ -23,6 +32,6 @@ export class CootIconSlack extends CootIcon {
         <path d="M10 9.5C10 8.67 9.33 8 8.5 8h-5C2.67 8 2 8.67 2 9.5S2.67 11 3.5 11h5c.83 0 1.5-.67 1.5-1.5z" />
         <path d="M8.5 5H10V3.5C10 2.67 9.33 2 8.5 2S7 2.67 7 3.5 7.67 5 8.5 5z" />
       </svg>
-    </coot-icon>`;
+       `;
   }
 }

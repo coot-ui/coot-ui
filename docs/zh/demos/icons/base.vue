@@ -1,6 +1,6 @@
 <template>
   <div class="button-display-container">
-    <coot-icon-activity size="14px" color="#f00">Default</coot-icon-activity>
+    <coot-icon-activity style="color: #f00">Default</coot-icon-activity>
   </div>
 </template>
 

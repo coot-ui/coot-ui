@@ -1,16 +1,25 @@
-import { html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-database')
-export class CootIconDatabase extends CootIcon {
+export class CootIconDatabase extends LitElement {
+
+  static styles = css`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  `;
+
   render() {
-    return html`<coot-icon size=${this.size} color=${this.color}>
-      <svg
+    return html`<svg
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
@@ -18,6 +27,6 @@ export class CootIconDatabase extends CootIcon {
         <path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3" />
         <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" />
       </svg>
-    </coot-icon>`;
+       `;
   }
 }

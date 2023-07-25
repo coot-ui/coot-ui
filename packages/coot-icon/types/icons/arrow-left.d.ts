@@ -1,4 +1,5 @@
-import { CootIcon } from '../components/coot-icon';
-export declare class CootIconArrowLeft extends CootIcon {
+import { LitElement } from 'lit';
+export declare class CootIconArrowLeft extends LitElement {
+    static styles: import("lit").CSSResult;
     render(): import("lit-html").TemplateResult<1>;
 }

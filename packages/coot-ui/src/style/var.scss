@@ -59,25 +59,25 @@
   --#{$prefix}-gray-9: #262626;
   --#{$prefix}-gray-10: #1f1f1f;
 
-  --#{$prefix}-color-text-main: fade(#000, 85%);
-  --#{$prefix}-color-text-secondary: fade(#000, 65%);
-  --#{$prefix}-color-text-tertiary: fade(#000, 45%);
-  --#{$prefix}-color-text-disable: fade(#000, 25%);
-  --#{$prefix}-color-border: fade(#000, 15%);
-  --#{$prefix}-color-divider: fade(#000, 6%);
-  --#{$prefix}-color-bg: fade(#000, 4%);
-  --#{$prefix}-color-table-header: fade(#000, 2%);
+  --#{$prefix}-color-text-main: rgba(0, 0, 0, 0.85);
+  --#{$prefix}-color-text-secondary: rgba(0, 0, 0, 0.65);
+  --#{$prefix}-color-text-tertiary: rgba(0, 0, 0, 0.45);
+  --#{$prefix}-color-text-disable: rgba(0, 0, 0, 0.25);
+  --#{$prefix}-color-border: rgba(0, 0, 0, 0.15);
+  --#{$prefix}-color-divider: rgba(0, 0, 0, 0.06);
+  --#{$prefix}-color-bg: rgba(0, 0, 0, 0.04);
+  --#{$prefix}-color-table-header: rgba(0, 0, 0, 0.02);
   --#{$prefix}-color-lighter: var(--#{$prefix}-gray-2);
   --#{$prefix}-color-light: var(--#{$prefix}-gray-3);
 
-  --#{$prefix}-dark-color-main: fade(#fff, 85%);
-  --#{$prefix}-dark-color-text-secondary: fade(#fff, 65%);
-  --#{$prefix}-dark-color-text-tertiary: fade(#fff, 45%);
-  --#{$prefix}-dark-color-text-disable: fade(#fff, 30%);
-  --#{$prefix}-dark-color-border: fade(#fff, 20%);
-  --#{$prefix}-dark-color-divider: fade(#fff, 12%);
-  --#{$prefix}-dark-color-bg: fade(#fff, 8%);
-  --#{$prefix}-dark-color-table-header: fade(#fff, 4%);
+  --#{$prefix}-dark-color-main: rgba(255, 255, 255, 0.85);
+  --#{$prefix}-dark-color-text-secondary: rgba(255, 255, 255, 0.65);
+  --#{$prefix}-dark-color-text-tertiary: rgba(255, 255, 255, 0.45);
+  --#{$prefix}-dark-color-text-disable: rgba(255, 255, 255, 0.3);
+  --#{$prefix}-dark-color-border: rgba(255, 255, 255, 0.2);
+  --#{$prefix}-dark-color-divider: rgba(255, 255, 255, 0.12);
+  --#{$prefix}-dark-color-bg: rgba(255, 255, 255, 0.08);
+  --#{$prefix}-dark-color-table-header: rgba(255, 255, 255, 0.04);
 
   // primary
   --#{$prefix}-primary: var(--#{$prefix}-blue-6);

@@ -2,7 +2,7 @@
 
 ## 按钮种类
 
-通过 `type` 属性设置不同种类的按钮。
+可以通过 `round`、`circle`、`square` 等属性设置不同种类的按钮。
 
 <demo path="../demos/button/type.vue"></demo>
 

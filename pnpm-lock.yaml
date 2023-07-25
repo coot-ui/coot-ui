@@ -75,6 +75,9 @@ importers:
 
   packages/coot-ui:
     dependencies:
+      '@coot-ui/icons':
+        specifier: workspace:^
+        version: link:../coot-icon
       lit:
         specifier: ^2.4.0
         version: 2.7.5

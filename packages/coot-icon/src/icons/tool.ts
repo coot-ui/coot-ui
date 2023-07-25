@@ -1,21 +1,30 @@
-import { html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-tool')
-export class CootIconTool extends CootIcon {
+export class CootIconTool extends LitElement {
+
+  static styles = css`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  `;
+
   render() {
-    return html`<coot-icon size=${this.size} color=${this.color}>
-      <svg
+    return html`<svg
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
         <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" />
       </svg>
-    </coot-icon>`;
+       `;
   }
 }

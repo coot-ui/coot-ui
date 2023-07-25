@@ -42,5 +42,6 @@ import '@coot-ui/button';
   display: flex;
   gap: 12px 16px;
   margin-bottom: 16px;
+  flex-wrap: wrap;
 }
 </style>

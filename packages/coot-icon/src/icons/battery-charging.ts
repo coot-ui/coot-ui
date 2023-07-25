@@ -1,16 +1,25 @@
-import { html } from 'lit';
+import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-battery-charging')
-export class CootIconBatteryCharging extends CootIcon {
+export class CootIconBatteryCharging extends LitElement {
+
+  static styles = css`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  `;
+
   render() {
-    return html`<coot-icon size=${this.size} color=${this.color}>
-      <svg
+    return html`<svg
         xmlns="http://www.w3.org/2000/svg"
+        width="1em"
+        height="1em"
         viewBox="0 0 24 24"
         fill="none"
         stroke="currentColor"
+        stroke-width="2"
         stroke-linecap="round"
         stroke-linejoin="round"
       >
@@ -18,6 +27,6 @@ export class CootIconBatteryCharging extends CootIcon {
         <line x1="23" y1="13" x2="23" y2="11" />
         <polyline points="11 6 7 12 13 12 9 18" />
       </svg>
-    </coot-icon>`;
+       `;
   }
 }

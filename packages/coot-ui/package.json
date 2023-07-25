@@ -16,6 +16,7 @@
     "build": "tsc && vite build"
   },
   "dependencies": {
+    "@coot-ui/icons": "workspace:^",
     "lit": "^2.4.0"
   },
   "devDependencies": {

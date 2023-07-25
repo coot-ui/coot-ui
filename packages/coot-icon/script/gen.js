@@ -21,23 +21,27 @@ const genContent = (filename) => {
     })
     .replace(/^\w/, (c) => c.toUpperCase());
   const code = svgCode
+    .replace('width="24"', 'width="1em"')
+    .replace('height="24"', 'height="1em"')
     .split('\n')
-    .filter(
-      (item) => !item.includes('width="') && !item.includes('height="') && item
-    )
     .map((line) => `      ${line}`)
     .join('\n');
   importCode += `import './icons/${filename}';\n`;
-  const res = `import { html } from 'lit';
+  const res = `import { LitElement, html, css } from 'lit';
 import { customElement } from 'lit/decorators.js';
-import { CootIcon } from '../components/coot-icon';
 
 @customElement('coot-icon-${filename}')
-export class CootIcon${camelName} extends CootIcon {
+export class CootIcon${camelName} extends LitElement {
+
+  static styles = css\`
+    :host {
+      display: inline-flex;
+      align-items: center;
+    }
+  \`;
+
   render() {
-    return html\`<coot-icon size=\${this.size} color=\${this.color}>
-${code}
-    </coot-icon>\`;
+    return html\`${code.trimStart()} \`;
   }
 }
 `;

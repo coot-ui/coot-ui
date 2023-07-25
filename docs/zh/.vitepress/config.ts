@@ -27,8 +27,8 @@ export default defineConfig({
       {
         text: '通用',
         items: [
-          { text: 'Button 按钮', link: '/components/button.md' },
           { text: 'Icon 图标', link: '/components/icon.md' },
+          { text: 'Button 按钮', link: '/components/button.md' },
         ],
       },
       {
@@ -65,7 +65,7 @@ export default defineConfig({
       alias: {
         '@coot-ui/icons': path.relative(
           __dirname,
-          '../../../packages/coot-icon/icons'
+          '../../../packages/coot-icon/dist'
         ),
         '@coot-ui': path.relative(
           __dirname,

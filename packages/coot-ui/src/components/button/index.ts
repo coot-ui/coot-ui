@@ -23,6 +23,12 @@ export class CootButton extends LitElement {
   @property({ type: Boolean })
   round = false;
 
+  @property({ type: Boolean })
+  circle = false;
+
+  @property({ type: Boolean })
+  square = false;
+
   ns = useNamespace('button');
 
   classes = () => ({
@@ -31,6 +37,8 @@ export class CootButton extends LitElement {
     [this.ns.m(`size-${this.size}`)]: true,
     [this.ns.m(`status-${this.status}`)]: true,
     [this.ns.is('round')]: this.round,
+    [this.ns.is('circle')]: this.circle,
+    [this.ns.is('square')]: this.square,
   });
 
   render() {
