@@ -21,22 +21,32 @@ const genContent = (filename) => {
     })
     .replace(/^\w/, (c) => c.toUpperCase());
   const code = svgCode
-    .replace('width="24"', 'width="1em"')
+    .replace('width="24"', '?spin=${this.spin}\n  width="1em"')
     .replace('height="24"', 'height="1em"')
     .split('\n')
     .map((line) => `      ${line}`)
     .join('\n');
   importCode += `import './icons/${filename}';\n`;
   const res = `import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('coot-icon-${filename}')
 export class CootIcon${camelName} extends LitElement {
+  @property({ type: Boolean })
+  spin = false;
 
   static styles = css\`
     :host {
       display: inline-flex;
       align-items: center;
+    }
+    @keyframes cootIconRotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    svg[spin] {
+      animation: cootIconRotate 1.6s linear infinite;
     }
   \`;
 

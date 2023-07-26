@@ -1,7 +1,7 @@
 $prefix: 'coot' !default;
 $common-separator: '-' !default;
-$element-separator: '__' !default;
-$modifier-separator: '--' !default;
+$element-separator: '_' !default;
+$modifier-separator: '-' !default;
 $state-prefix: 'is-' !default;
 
 $component-size: default, small, mini, large;

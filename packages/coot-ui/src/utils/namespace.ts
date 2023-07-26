@@ -7,8 +7,8 @@ const generateName = (
   modifier?: string
 ) => {
   let defaultName = block === '' ? `${prefix}` : `${prefix}-${block}`;
-  if (element) defaultName += `__${element}`;
-  if (modifier) defaultName += `--${modifier}`;
+  if (element) defaultName += `_${element}`;
+  if (modifier) defaultName += `-${modifier}`;
   return defaultName;
 };
 

@@ -43,5 +43,11 @@ import '@coot-ui/button';
   gap: 12px 16px;
   margin-bottom: 16px;
   flex-wrap: wrap;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 </style>

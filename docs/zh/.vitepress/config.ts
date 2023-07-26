@@ -1,6 +1,23 @@
 import { defineConfig } from 'vitepress';
 import { markdownDemo } from 'vitepress-demo-box';
 import path from 'path';
+import fs from 'fs';
+
+const compAlias = {};
+fs.readdirSync(
+  path.resolve(__dirname, '../../../packages/coot-ui/src/components'),
+  'utf-8'
+)
+  .map((file) => {
+    const fileObj = path.parse(file);
+    return fileObj.name;
+  })
+  .forEach((name) => {
+    compAlias[`@coot-ui/${name}`] = path.resolve(
+      __dirname,
+      '../../../packages/coot-ui/src/components/' + name
+    );
+  });
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -63,14 +80,7 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '@coot-ui/icons': path.relative(
-          __dirname,
-          '../../../packages/coot-icon/dist'
-        ),
-        '@coot-ui': path.relative(
-          __dirname,
-          '../../../packages/coot-ui/src/components'
-        ),
+        ...compAlias,
       },
     },
   },

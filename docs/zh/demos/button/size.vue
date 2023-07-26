@@ -49,5 +49,11 @@ import '@coot-ui/button';
   margin-bottom: 16px;
   flex-wrap: wrap;
   margin-top: 4px;
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+  }
 }
 </style>

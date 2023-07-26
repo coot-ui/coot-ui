@@ -1,19 +1,30 @@
 import { LitElement, html, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
+import { customElement, property } from 'lit/decorators.js';
 
 @customElement('coot-icon-meh')
 export class CootIconMeh extends LitElement {
+  @property({ type: Boolean })
+  spin = false;
 
   static styles = css`
     :host {
       display: inline-flex;
       align-items: center;
     }
+    @keyframes cootIconRotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+    svg[spin] {
+      animation: cootIconRotate 1.6s linear infinite;
+    }
   `;
 
   render() {
     return html`<svg
         viewBox="0 0 24 24"
+        ?spin=${this.spin}
         width="1em"
         height="1em"
         xmlns="http://www.w3.org/2000/svg"
