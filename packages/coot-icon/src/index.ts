@@ -226,6 +226,7 @@ import './icons/sliders';
 import './icons/smartphone';
 import './icons/smile';
 import './icons/speaker';
+import './icons/spin';
 import './icons/square';
 import './icons/star';
 import './icons/stop-circle';

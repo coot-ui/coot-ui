@@ -28,9 +28,7 @@ $button-type: primary, outline, dashed, link, text;
   --button-text-disable: var(--#{$prefix}-color-text-disable);
   --button-border: var(--#{$prefix}-gray-4);
   --button-radius: var(--#{$prefix}-radius);
-  --button-font-size: var(--#{$prefix}-font-size);
-  --button-font-size-mini: var(--#{$prefix}-font-size-mini);
-  --button-font-size-large: var(--#{$prefix}-font-size-large);
+  --button-font-family: var(--#{$prefix}-font-family);
 }
 
 @include b(button) {
@@ -45,6 +43,7 @@ $button-type: primary, outline, dashed, link, text;
   background-color: transparent;
   color: var(--button-text-color);
   cursor: pointer;
+  font-family: var(--button-font-family);
 
   @include when(long) {
     width: 100%;

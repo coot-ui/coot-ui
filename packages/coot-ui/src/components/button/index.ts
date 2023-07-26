@@ -3,7 +3,7 @@ import { customElement, property } from 'lit/decorators.js';
 import { classMap } from 'lit/directives/class-map.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
-import '@coot-ui/icons/loader';
+import '@coot-ui/icons/spin';
 
 import { useNamespace } from '../../utils';
 import type { ComponentSize } from '../../constant';
@@ -65,7 +65,7 @@ export class CootButton extends LitElement {
 
   renderIcon() {
     if (this.loading) {
-      return html`<coot-icon-loader spin></coot-icon-loader>`;
+      return html`<coot-icon-spin spin></coot-icon-spin>`;
     } else if (this.icon) {
       return html`<slot name="icon">
         ${unsafeHTML(`<coot-icon-${this.icon}></coot-icon-${this.icon}>`)}

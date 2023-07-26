@@ -1,5 +1,6 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, unsafeCSS } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
+import styles from '../style.scss?inline';
 
 @customElement('coot-icon-anchor')
 export class CootIconAnchor extends LitElement {
@@ -7,18 +8,7 @@ export class CootIconAnchor extends LitElement {
   spin = false;
 
   static styles = css`
-    :host {
-      display: inline-flex;
-      align-items: center;
-    }
-    @keyframes cootIconRotate {
-      100% {
-        transform: rotate(360deg);
-      }
-    }
-    svg[spin] {
-      animation: cootIconRotate 1.6s linear infinite;
-    }
+    ${unsafeCSS(styles)}
   `;
 
   render() {
