@@ -29,11 +29,13 @@ onMounted(() => {
     '../../../../packages/coot-icon/dist/*.mjs'
   );
 
-  const names = Object.keys(files).map((file) => {
-    const segs = file.split('/');
-    const name = segs[segs.length - 1].replace('.mjs', '');
-    return name;
-  });
+  const names = Object.keys(files)
+    .map((file) => {
+      const segs = file.split('/');
+      const name = segs[segs.length - 1].replace('.mjs', '');
+      return name;
+    })
+    .filter((item) => !item.startsWith('style.'));
   list.value = names;
 });
 </script>
@@ -54,13 +56,14 @@ onMounted(() => {
   align-items: center;
   flex: 1;
   min-width: 120px;
-  padding: 12px 0;
+  padding: 20px 0 12px;
   border-bottom: 1px solid var(--coot-color-border);
   border-right: 1px solid var(--coot-color-border);
   cursor: pointer;
 }
 .icon-display-box {
-  font-size: 32px;
+  font-size: 20px;
+  margin-bottom: 4px;
 }
 .icon-name {
   font-size: 12px;
