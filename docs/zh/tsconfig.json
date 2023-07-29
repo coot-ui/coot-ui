@@ -19,5 +19,5 @@
     "skipLibCheck": true,
     "target": "ES5"
   },
-  "include": ["demos/**/*.vue", "vite-env.d.ts"]
+  "include": ["demos/**/*.vue", "vite-env.d.ts", ".vitepress/components*.vue"]
 }

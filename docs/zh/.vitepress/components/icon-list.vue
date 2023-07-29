@@ -22,9 +22,10 @@
 import { ref, onMounted } from 'vue';
 import '../../../../packages/coot-icon/dist/index.mjs';
 
-const list = ref([]);
+const list = ref<string[]>([]);
 
 onMounted(() => {
+  // @ts-ignore
   const files = import.meta.globEager(
     '../../../../packages/coot-icon/dist/*.mjs'
   );
