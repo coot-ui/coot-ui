@@ -33,26 +33,10 @@ export default defineConfig({
     outline: [2, 3],
     sidebar: [
       {
-        text: '指南',
-        items: [
-          { text: '介绍', link: '/guide/introduction' },
-          { text: '使用', link: '/guide/start' },
-          { text: '指定 IDE', link: '/guide/ide' },
-          { text: 'API', link: '/guide/api' },
-        ],
-      },
-      {
         text: '通用',
         items: [
           { text: 'Icon 图标', link: '/components/icon.md' },
           { text: 'Button 按钮', link: '/components/button.md' },
-        ],
-      },
-      {
-        text: '更多',
-        items: [
-          { text: '常见问题', link: '/more/question' },
-          { text: '交流与反馈', link: '/more/feedback' },
         ],
       },
     ],
