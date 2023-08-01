@@ -1,0 +1,72 @@
+@use '~@/style/config.scss' as *;
+
+$group: #{$prefix}-button-group;
+$button: #{$prefix}-button;
+$button-square: #{$prefix}-is-square;
+$button-circle: #{$prefix}-is-circle;
+
+#{$group} {
+  #{$button} {
+    &:not(&:first-of-type):not(&:last-of-type) {
+      &::part(#{$button}) {
+        border-radius: 0;
+      }
+    }
+    &:not(&:last-of-type) {
+      &:not(&:hover)::part(#{$button}) {
+        border-right-width: 0;
+      }
+      @each $size in $component-size {
+        &:not(&:hover)::part(#{$button}-size-#{$size}) {
+          min-width: calc(var(--button-size-#{$size}) - 1px);
+        }
+      }
+      &:hover {
+        & + #{$button} {
+          &::part(#{$button}) {
+            border-left-width: 0;
+          }
+          @each $size in $component-size {
+            &:not(&:hover)::part(#{$button}-size-#{$size}) {
+              min-width: calc(var(--button-size-#{$size}) - 2px);
+            }
+          }
+        }
+      }
+    }
+    &:not(&:last-of-type) {
+      &::part(#{$button}-type-primary) {
+        position: relative;
+        &::after {
+          display: block;
+          content: '';
+          width: 1px;
+          position: absolute;
+          height: 100%;
+          top: 0;
+          bottom: 0;
+          right: -1px;
+          background-color: #fff;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  #{$button}:last-of-type {
+    &::part(#{$button}) {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    @each $size in $component-size {
+      &::part(#{$button}-size-#{$size}) {
+        min-width: calc(var(--button-size-#{$size}) - 1px);
+      }
+    }
+  }
+  #{$button}:first-of-type {
+    &::part(#{$button}) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

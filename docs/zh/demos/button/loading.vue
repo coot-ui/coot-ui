@@ -46,7 +46,7 @@
       >Outline</coot-button
     >
   </div>
-  <div>加载时固定宽度</div>
+  <div>点击加载时固定宽度</div>
   <div class="button-display-container">
     <coot-button
       :loading="defaultFixedLoading"

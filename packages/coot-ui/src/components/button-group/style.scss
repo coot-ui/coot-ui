@@ -1,0 +1,7 @@
+@use '~@/style/mixin.scss' as *;
+
+@include b(button-group) {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+}

@@ -1,6 +1,5 @@
-@use '../../style/mixin.scss' as *;
-@use '../../style/config.scss' as *;
-@use '../../style/var.scss' as *;
+@use '~@/style/mixin.scss' as *;
+@use '~@/style/config.scss' as *;
 
 $button-status: primary, success, danger, warning;
 $button-type: primary, outline, dashed, link, text;

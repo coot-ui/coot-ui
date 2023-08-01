@@ -1,4 +1,10 @@
 import { defineConfig } from 'vite';
+import path from 'path';
+
+export const Alias = {
+  '@': path.resolve(__dirname, './src'),
+  '~@': path.resolve(__dirname, './src'),
+};
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,5 +16,8 @@ export default defineConfig({
     rollupOptions: {
       external: /^lit/,
     },
+  },
+  resolve: {
+    alias: Alias,
   },
 });

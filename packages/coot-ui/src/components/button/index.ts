@@ -1,12 +1,11 @@
 import { LitElement, html, unsafeCSS, css } from 'lit';
 import { customElement, property } from 'lit/decorators.js';
-import { classMap } from 'lit/directives/class-map.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 import '@coot-ui/icons/spin';
 
-import { useNamespace } from '../../utils';
-import type { ComponentSize } from '../../constant';
+import { useNamespace, classString } from '@/utils';
+import type { ComponentSize } from '@/constant';
 
 import styles from './style.scss?inline';
 
@@ -76,7 +75,10 @@ export class CootButton extends LitElement {
   }
 
   render() {
-    return html`<button class=${classMap(this.classes())} part=${this.ns.b()}>
+    return html`<button
+      class=${classString(this.classes())}
+      part=${classString(this.classes())}
+    >
       ${this.renderIcon()}
       <slot></slot>
     </button>`;
