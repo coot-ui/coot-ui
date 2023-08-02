@@ -103,7 +103,8 @@ $button-type: primary, outline, dashed, link, text;
           border-color: var(--button-#{$status}-disable);
         }
       }
-      &.#{$prefix}-button-type-default {
+      &.#{$prefix}-button-type-default,
+      &.#{$prefix}-button-type-dashed {
         color: var(--button-text-color);
         border-color: var(--button-border);
         @include when(disabled) {
@@ -145,6 +146,28 @@ $button-type: primary, outline, dashed, link, text;
           &:hover,
           &:active {
             background-color: var(--button-#{$status}-disable);
+          }
+        }
+      }
+
+      &.#{$prefix}-button-type-outline {
+        &:hover {
+          border-color: var(--button-#{$status});
+          background-color: var(--button-#{$status});
+          color: white;
+        }
+        &:active {
+          border-color: var(--button-#{$status}-active);
+          background-color: var(--button-#{$status}-active);
+          color: white;
+        }
+        @include when(disabled) {
+          &,
+          &:active,
+          &:hover {
+            color: var(--button-#{$status}-disable);
+            border-color: var(--button-#{$status}-disable);
+            background-color: transparent;
           }
         }
       }

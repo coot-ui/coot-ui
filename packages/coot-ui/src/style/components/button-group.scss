@@ -4,6 +4,7 @@ $group: #{$prefix}-button-group;
 $button: #{$prefix}-button;
 $button-square: #{$prefix}-is-square;
 $button-circle: #{$prefix}-is-circle;
+$button-status: primary, success, danger, warning;
 
 #{$group} {
   #{$button} {
@@ -13,28 +14,14 @@ $button-circle: #{$prefix}-is-circle;
       }
     }
     &:not(&:last-of-type) {
-      &:not(&:hover)::part(#{$button}) {
-        border-right-width: 0;
+      &::part(#{$button}) {
+        margin-inline-end: -1px;
       }
-      @each $size in $component-size {
-        &:not(&:hover)::part(#{$button}-size-#{$size}) {
-          min-width: calc(var(--button-size-#{$size}) - 1px);
-        }
-      }
+
       &:hover {
-        & + #{$button} {
-          &::part(#{$button}) {
-            border-left-width: 0;
-          }
-          @each $size in $component-size {
-            &:not(&:hover)::part(#{$button}-size-#{$size}) {
-              min-width: calc(var(--button-size-#{$size}) - 2px);
-            }
-          }
-        }
+        z-index: 2;
       }
-    }
-    &:not(&:last-of-type) {
+
       &::part(#{$button}-type-primary) {
         position: relative;
         &::after {
@@ -46,8 +33,15 @@ $button-circle: #{$prefix}-is-circle;
           top: 0;
           bottom: 0;
           right: -1px;
-          background-color: #fff;
-          z-index: 1;
+          z-index: 3;
+        }
+      }
+
+      @each $status in $button-status {
+        &::part(#{$button}-type-primary #{$button}-status-#{$status}) {
+          &::after {
+            background-color: var(--#{$prefix}-#{$status}-hover);
+          }
         }
       }
     }
@@ -56,11 +50,6 @@ $button-circle: #{$prefix}-is-circle;
     &::part(#{$button}) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
-    }
-    @each $size in $component-size {
-      &::part(#{$button}-size-#{$size}) {
-        min-width: calc(var(--button-size-#{$size}) - 1px);
-      }
     }
   }
   #{$button}:first-of-type {
