@@ -1,7 +1,7 @@
 export type ButtonType =
   | 'default'
   | 'primary'
-  | 'outline'
+  | 'secondary'
   | 'dashed'
   | 'text'
   | 'link';

@@ -19,10 +19,10 @@
 
   <div class="button-display-container">
     <coot-button-group>
-      <coot-button type="outline">Add</coot-button>
-      <coot-button type="outline">Edit</coot-button>
-      <coot-button type="outline">Confirm</coot-button>
-      <coot-button type="outline">Delete</coot-button>
+      <coot-button type="secondary">Add</coot-button>
+      <coot-button type="secondary">Edit</coot-button>
+      <coot-button type="secondary">Confirm</coot-button>
+      <coot-button type="secondary">Delete</coot-button>
     </coot-button-group>
   </div>
 

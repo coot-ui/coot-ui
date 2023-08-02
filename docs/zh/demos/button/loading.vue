@@ -3,7 +3,7 @@
   <div class="button-display-container">
     <coot-button loading>Default</coot-button>
     <coot-button loading type="primary">Primary</coot-button>
-    <coot-button loading type="outline">Outline</coot-button>
+    <coot-button loading type="secondary">Secondary</coot-button>
     <coot-button loading disabled type="dashed">Dashed</coot-button>
     <coot-button loading disabled type="text">Text</coot-button>
     <coot-button loading disabled type="link">Link</coot-button>
@@ -20,10 +20,10 @@
       >Primary</coot-button
     >
     <coot-button
-      :loading="outlineLoading"
-      @click="handleClickOutline()"
-      type="outline"
-      >Outline</coot-button
+      :loading="secondaryLoading"
+      @click="handleClickSecondary()"
+      type="secondary"
+      >Secondary</coot-button
     >
     <coot-button
       icon="download"
@@ -40,10 +40,10 @@
     >
     <coot-button
       icon="download"
-      :loading="outlineIconLoading"
-      @click="handleClickOutlineIcon()"
-      type="outline"
-      >Outline</coot-button
+      :loading="secondaryIconLoading"
+      @click="handleClickSecondaryIcon()"
+      type="secondary"
+      >Secondary</coot-button
     >
   </div>
   <div>点击加载时固定宽度</div>
@@ -79,11 +79,11 @@ const handleClickPrimary = () => {
   }, 3000);
 };
 
-const outlineLoading = ref(false);
-const handleClickOutline = () => {
-  outlineLoading.value = true;
+const secondaryLoading = ref(false);
+const handleClickSecondary = () => {
+  secondaryLoading.value = true;
   setTimeout(() => {
-    outlineLoading.value = false;
+    secondaryLoading.value = false;
   }, 3000);
 };
 
@@ -103,11 +103,11 @@ const handleClickPrimaryIcon = () => {
   }, 3000);
 };
 
-const outlineIconLoading = ref(false);
-const handleClickOutlineIcon = () => {
-  outlineIconLoading.value = true;
+const secondaryIconLoading = ref(false);
+const handleClickSecondaryIcon = () => {
+  secondaryIconLoading.value = true;
   setTimeout(() => {
-    outlineIconLoading.value = false;
+    secondaryIconLoading.value = false;
   }, 3000);
 };
 

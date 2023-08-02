@@ -36,7 +36,7 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    outline: [2, 3],
+    secondary: [2, 3],
     sidebar: [
       {
         text: '通用',

@@ -3,7 +3,7 @@
   <div class="button-display-container">
     <coot-button size="large">Default</coot-button>
     <coot-button size="large" type="primary">Primary</coot-button>
-    <coot-button size="large" type="outline">Outline</coot-button>
+    <coot-button size="large" type="secondary">Secondary</coot-button>
     <coot-button size="large" type="dashed">Dashed</coot-button>
     <coot-button size="large" type="text">Text</coot-button>
     <coot-button size="large" type="link">Link</coot-button>
@@ -12,7 +12,7 @@
   <div class="button-display-container">
     <coot-button>Default</coot-button>
     <coot-button type="primary">Primary</coot-button>
-    <coot-button type="outline">Outline</coot-button>
+    <coot-button type="secondary">Secondary</coot-button>
     <coot-button type="dashed">Dashed</coot-button>
     <coot-button type="text">Text</coot-button>
     <coot-button type="link">Link</coot-button>
@@ -21,7 +21,7 @@
   <div class="button-display-container">
     <coot-button size="small">Default</coot-button>
     <coot-button size="small" type="primary">Primary</coot-button>
-    <coot-button size="small" type="outline">Outline</coot-button>
+    <coot-button size="small" type="secondary">Secondary</coot-button>
     <coot-button size="small" type="dashed">Dashed</coot-button>
     <coot-button size="small" type="text">Text</coot-button>
     <coot-button size="small" type="link">Link</coot-button>
@@ -30,7 +30,7 @@
   <div class="button-display-container">
     <coot-button size="mini">Default</coot-button>
     <coot-button size="mini" type="primary">Primary</coot-button>
-    <coot-button size="mini" type="outline">Outline</coot-button>
+    <coot-button size="mini" type="secondary">Secondary</coot-button>
     <coot-button size="mini" type="dashed">Dashed</coot-button>
     <coot-button size="mini" type="text">Text</coot-button>
     <coot-button size="mini" type="link">Link</coot-button>

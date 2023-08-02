@@ -2,7 +2,7 @@
 @use '~@/style/config.scss' as *;
 
 $button-status: primary, success, danger, warning;
-$button-type: primary, outline, dashed, link, text;
+$button-type: primary, secondary, dashed, link, text;
 
 :host {
   display: inline-flex;
@@ -150,7 +150,7 @@ $button-type: primary, outline, dashed, link, text;
         }
       }
 
-      &.#{$prefix}-button-type-outline {
+      &.#{$prefix}-button-type-secondary {
         &:hover {
           border-color: var(--button-#{$status});
           background-color: var(--button-#{$status});

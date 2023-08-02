@@ -3,7 +3,7 @@
   <div class="button-display-container">
     <coot-button icon="chevron-left"> Default </coot-button>
     <coot-button icon="download" type="primary"> Primary </coot-button>
-    <coot-button icon="chevron-left" type="outline"> Outline </coot-button>
+    <coot-button icon="chevron-left" type="secondary"> Secondary </coot-button>
     <coot-button icon="chevron-left" type="dashed"> Dashed </coot-button>
     <coot-button icon="chevron-left" type="text"> Text </coot-button>
     <coot-button icon="chevron-left" type="link"> Link </coot-button>
@@ -12,7 +12,7 @@
   <div class="button-display-container">
     <coot-button icon="search" square> </coot-button>
     <coot-button icon="search" square type="primary"> </coot-button>
-    <coot-button icon="search" square type="outline"> </coot-button>
+    <coot-button icon="search" square type="secondary"> </coot-button>
     <coot-button icon="download" square type="dashed"> </coot-button>
     <coot-button icon="download" square type="text"> </coot-button>
     <coot-button icon="download" square type="link"> </coot-button>
@@ -21,7 +21,7 @@
   <div class="button-display-container">
     <coot-button icon="search" circle> </coot-button>
     <coot-button icon="search" circle type="primary"> </coot-button>
-    <coot-button icon="search" circle type="outline"> </coot-button>
+    <coot-button icon="search" circle type="secondary"> </coot-button>
     <coot-button icon="download" circle type="dashed"> </coot-button>
     <coot-button icon="download" circle type="text"> </coot-button>
     <coot-button icon="download" circle type="link"> </coot-button>

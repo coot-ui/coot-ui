@@ -2,7 +2,7 @@
   <div class="button-display-container">
     <coot-button long>Default</coot-button>
     <coot-button long type="primary">Primary</coot-button>
-    <coot-button long type="outline">Outline</coot-button>
+    <coot-button long type="secondary">Secondary</coot-button>
     <coot-button long type="dashed">Dashed</coot-button>
   </div>
 </template>

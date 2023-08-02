@@ -2,7 +2,7 @@
   <div class="button-display-container">
     <coot-button>Default</coot-button>
     <coot-button type="primary">Primary</coot-button>
-    <coot-button type="outline">Outline</coot-button>
+    <coot-button type="secondary">Secondary</coot-button>
     <coot-button type="dashed">Dashed</coot-button>
     <coot-button type="text">Text</coot-button>
     <coot-button type="link">Link</coot-button>
@@ -10,7 +10,7 @@
   <div class="button-display-container">
     <coot-button status="success">Default</coot-button>
     <coot-button status="success" type="primary">Primary</coot-button>
-    <coot-button status="success" type="outline">Outline</coot-button>
+    <coot-button status="success" type="secondary">Secondary</coot-button>
     <coot-button status="success" type="dashed">Dashed</coot-button>
     <coot-button status="success" type="text">Text</coot-button>
     <coot-button status="success" type="link">Link</coot-button>
@@ -18,7 +18,7 @@
   <div class="button-display-container">
     <coot-button status="danger">Default</coot-button>
     <coot-button status="danger" type="primary">Primary</coot-button>
-    <coot-button status="danger" type="outline">Outline</coot-button>
+    <coot-button status="danger" type="secondary">Secondary</coot-button>
     <coot-button status="danger" type="dashed">Dashed</coot-button>
     <coot-button status="danger" type="text">Text</coot-button>
     <coot-button status="danger" type="link">Link</coot-button>
@@ -26,7 +26,7 @@
   <div class="button-display-container">
     <coot-button status="warning">Default</coot-button>
     <coot-button status="warning" type="primary">Primary</coot-button>
-    <coot-button status="warning" type="outline">Outline</coot-button>
+    <coot-button status="warning" type="secondary">Secondary</coot-button>
     <coot-button status="warning" type="dashed">Dashed</coot-button>
     <coot-button status="warning" type="text">Text</coot-button>
     <coot-button status="warning" type="link">Link</coot-button>
