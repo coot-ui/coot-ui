@@ -19,7 +19,7 @@ $button-status: primary, success, danger, warning;
       }
 
       &:hover {
-        z-index: 2;
+        z-index: 3;
       }
 
       &::part(#{$button}-type-primary) {
@@ -33,7 +33,7 @@ $button-status: primary, success, danger, warning;
           top: 0;
           bottom: 0;
           right: -1px;
-          z-index: 3;
+          z-index: 2;
         }
       }
 
@@ -41,6 +41,9 @@ $button-status: primary, success, danger, warning;
         &::part(#{$button}-type-primary #{$button}-status-#{$status}) {
           &::after {
             background-color: var(--#{$prefix}-#{$status}-hover);
+          }
+          &:active::after {
+            background-color: var(--#{$prefix}-#{$status}-active);
           }
         }
       }
@@ -50,6 +53,9 @@ $button-status: primary, success, danger, warning;
     &::part(#{$button}) {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
+    }
+    &:hover {
+      z-index: 3;
     }
   }
   #{$button}:first-of-type {
