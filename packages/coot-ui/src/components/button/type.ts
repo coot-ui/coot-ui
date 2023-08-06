@@ -1,3 +1,5 @@
+import type { ComponentSize } from '@/constant';
+
 export type ButtonType =
   | 'default'
   | 'primary'
@@ -7,3 +9,5 @@ export type ButtonType =
   | 'link';
 
 export type ButtonStatus = 'primary' | 'success' | 'warning' | 'danger';
+
+export type ButtonSize = ComponentSize;

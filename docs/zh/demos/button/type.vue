@@ -20,7 +20,7 @@
 </template>
 
 <script setup lang="ts">
-import '@coot-ui/button';
+import 'coot-ui/dist/components/button';
 import '@coot-ui/icons/edit-3';
 </script>
 

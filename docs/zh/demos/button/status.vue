@@ -34,7 +34,7 @@
 </template>
 
 <script setup lang="ts">
-import '@coot-ui/button';
+import 'coot-ui/dist/components/button';
 </script>
 
 <style scoped lang="less">

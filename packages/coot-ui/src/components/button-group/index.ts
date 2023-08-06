@@ -6,7 +6,7 @@ import { useNamespace, classString } from '@/utils';
 import styles from './style.scss?inline';
 
 @customElement('coot-button-group')
-export class CootButton extends LitElement {
+export class CootButtonGroup extends LitElement {
   ns = useNamespace('button-group');
 
   classes = () => ({

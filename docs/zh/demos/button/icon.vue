@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import '@coot-ui/button';
+import 'coot-ui/dist/components/button';
 import '@coot-ui/icons/search';
 import '@coot-ui/icons/download';
 import '@coot-ui/icons/chevron-left';

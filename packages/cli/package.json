@@ -1,0 +1,27 @@
+{
+  "name": "@coot-ui/cli",
+  "version": "1.0.0",
+  "description": "The cli of coot ui",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "coot-analyze": "./lib/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cem": "cem analyze --litelement --globs ../../../coot-ui/src"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@lit-labs/analyzer": "^0.9.0"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.8.4",
+    "chokidar": "^3.5.3",
+    "command-line-args": "^5.2.1",
+    "debounce": "^1.2.1",
+    "globby": "^11.0.4",
+    "prettier": "^2.7.1"
+  }
+}

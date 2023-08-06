@@ -17,7 +17,7 @@ function getComponentsAlias() {
       return fileObj.name;
     })
     .forEach((name) => {
-      compAlias[`@coot-ui/${name}`] = path.resolve(
+      compAlias[`coot-ui/dist/components/${name}`] = path.resolve(
         __dirname,
         '../../../packages/coot-ui/src/components/' + name
       );

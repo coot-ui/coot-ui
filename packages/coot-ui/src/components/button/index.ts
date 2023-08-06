@@ -5,11 +5,10 @@ import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 import '@coot-ui/icons/spin';
 
 import { useNamespace, classString } from '@/utils';
-import type { ComponentSize } from '@/constant';
 
 import styles from './style.scss?inline';
 
-import { ButtonType, ButtonStatus } from './type';
+import { ButtonType, ButtonStatus, ButtonSize } from './type';
 
 @customElement('coot-button')
 export class CootButton extends LitElement {
@@ -20,7 +19,7 @@ export class CootButton extends LitElement {
   status: ButtonStatus = 'primary';
 
   @property({ type: String })
-  size: ComponentSize = 'default';
+  size: ButtonSize = 'default';
 
   @property({ type: Boolean })
   round = false;
@@ -47,6 +46,10 @@ export class CootButton extends LitElement {
   icon = '';
 
   ns = useNamespace('button');
+
+  test() {
+    this.dispatchEvent(new CustomEvent('testEvent', { detail: 'ok' }));
+  }
 
   classes = () => ({
     [this.ns.b()]: true,

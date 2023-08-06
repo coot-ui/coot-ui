@@ -60,7 +60,7 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import '@coot-ui/button';
+import 'coot-ui/dist/components/button';
 import '@coot-ui/icons/download';
 
 const defaultLoading = ref(false);
