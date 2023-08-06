@@ -1,44 +1,44 @@
 <template>
   <p class="label">large</p>
   <div class="button-display-container">
-    <coot-button size="large">Default</coot-button>
-    <coot-button size="large" type="primary">Primary</coot-button>
-    <coot-button size="large" type="secondary">Secondary</coot-button>
-    <coot-button size="large" type="dashed">Dashed</coot-button>
-    <coot-button size="large" type="text">Text</coot-button>
-    <coot-button size="large" type="link">Link</coot-button>
+    <c-button size="large">Default</c-button>
+    <c-button size="large" type="primary">Primary</c-button>
+    <c-button size="large" type="secondary">Secondary</c-button>
+    <c-button size="large" type="dashed">Dashed</c-button>
+    <c-button size="large" type="text">Text</c-button>
+    <c-button size="large" type="link">Link</c-button>
   </div>
   <p class="label">default</p>
   <div class="button-display-container">
-    <coot-button>Default</coot-button>
-    <coot-button type="primary">Primary</coot-button>
-    <coot-button type="secondary">Secondary</coot-button>
-    <coot-button type="dashed">Dashed</coot-button>
-    <coot-button type="text">Text</coot-button>
-    <coot-button type="link">Link</coot-button>
+    <c-button>Default</c-button>
+    <c-button type="primary">Primary</c-button>
+    <c-button type="secondary">Secondary</c-button>
+    <c-button type="dashed">Dashed</c-button>
+    <c-button type="text">Text</c-button>
+    <c-button type="link">Link</c-button>
   </div>
   <p class="label">small</p>
   <div class="button-display-container">
-    <coot-button size="small">Default</coot-button>
-    <coot-button size="small" type="primary">Primary</coot-button>
-    <coot-button size="small" type="secondary">Secondary</coot-button>
-    <coot-button size="small" type="dashed">Dashed</coot-button>
-    <coot-button size="small" type="text">Text</coot-button>
-    <coot-button size="small" type="link">Link</coot-button>
+    <c-button size="small">Default</c-button>
+    <c-button size="small" type="primary">Primary</c-button>
+    <c-button size="small" type="secondary">Secondary</c-button>
+    <c-button size="small" type="dashed">Dashed</c-button>
+    <c-button size="small" type="text">Text</c-button>
+    <c-button size="small" type="link">Link</c-button>
   </div>
   <p class="label">mini</p>
   <div class="button-display-container">
-    <coot-button size="mini">Default</coot-button>
-    <coot-button size="mini" type="primary">Primary</coot-button>
-    <coot-button size="mini" type="secondary">Secondary</coot-button>
-    <coot-button size="mini" type="dashed">Dashed</coot-button>
-    <coot-button size="mini" type="text">Text</coot-button>
-    <coot-button size="mini" type="link">Link</coot-button>
+    <c-button size="mini">Default</c-button>
+    <c-button size="mini" type="primary">Primary</c-button>
+    <c-button size="mini" type="secondary">Secondary</c-button>
+    <c-button size="mini" type="dashed">Dashed</c-button>
+    <c-button size="mini" type="text">Text</c-button>
+    <c-button size="mini" type="link">Link</c-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 </script>
 
 <style scoped lang="less">

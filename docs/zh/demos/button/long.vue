@@ -1,14 +1,14 @@
 <template>
   <div class="button-display-container">
-    <coot-button long>Default</coot-button>
-    <coot-button long type="primary">Primary</coot-button>
-    <coot-button long type="secondary">Secondary</coot-button>
-    <coot-button long type="dashed">Dashed</coot-button>
+    <c-button long>Default</c-button>
+    <c-button long type="primary">Primary</c-button>
+    <c-button long type="secondary">Secondary</c-button>
+    <c-button long type="dashed">Dashed</c-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/edit-3';
 </script>
 

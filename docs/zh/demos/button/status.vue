@@ -1,40 +1,40 @@
 <template>
   <div class="button-display-container">
-    <coot-button>Default</coot-button>
-    <coot-button type="primary">Primary</coot-button>
-    <coot-button type="secondary">Secondary</coot-button>
-    <coot-button type="dashed">Dashed</coot-button>
-    <coot-button type="text">Text</coot-button>
-    <coot-button type="link">Link</coot-button>
+    <c-button>Default</c-button>
+    <c-button type="primary">Primary</c-button>
+    <c-button type="secondary">Secondary</c-button>
+    <c-button type="dashed">Dashed</c-button>
+    <c-button type="text">Text</c-button>
+    <c-button type="link">Link</c-button>
   </div>
   <div class="button-display-container">
-    <coot-button status="success">Default</coot-button>
-    <coot-button status="success" type="primary">Primary</coot-button>
-    <coot-button status="success" type="secondary">Secondary</coot-button>
-    <coot-button status="success" type="dashed">Dashed</coot-button>
-    <coot-button status="success" type="text">Text</coot-button>
-    <coot-button status="success" type="link">Link</coot-button>
+    <c-button status="success">Default</c-button>
+    <c-button status="success" type="primary">Primary</c-button>
+    <c-button status="success" type="secondary">Secondary</c-button>
+    <c-button status="success" type="dashed">Dashed</c-button>
+    <c-button status="success" type="text">Text</c-button>
+    <c-button status="success" type="link">Link</c-button>
   </div>
   <div class="button-display-container">
-    <coot-button status="danger">Default</coot-button>
-    <coot-button status="danger" type="primary">Primary</coot-button>
-    <coot-button status="danger" type="secondary">Secondary</coot-button>
-    <coot-button status="danger" type="dashed">Dashed</coot-button>
-    <coot-button status="danger" type="text">Text</coot-button>
-    <coot-button status="danger" type="link">Link</coot-button>
+    <c-button status="danger">Default</c-button>
+    <c-button status="danger" type="primary">Primary</c-button>
+    <c-button status="danger" type="secondary">Secondary</c-button>
+    <c-button status="danger" type="dashed">Dashed</c-button>
+    <c-button status="danger" type="text">Text</c-button>
+    <c-button status="danger" type="link">Link</c-button>
   </div>
   <div class="button-display-container">
-    <coot-button status="warning">Default</coot-button>
-    <coot-button status="warning" type="primary">Primary</coot-button>
-    <coot-button status="warning" type="secondary">Secondary</coot-button>
-    <coot-button status="warning" type="dashed">Dashed</coot-button>
-    <coot-button status="warning" type="text">Text</coot-button>
-    <coot-button status="warning" type="link">Link</coot-button>
+    <c-button status="warning">Default</c-button>
+    <c-button status="warning" type="primary">Primary</c-button>
+    <c-button status="warning" type="secondary">Secondary</c-button>
+    <c-button status="warning" type="dashed">Dashed</c-button>
+    <c-button status="warning" type="text">Text</c-button>
+    <c-button status="warning" type="link">Link</c-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 </script>
 
 <style scoped lang="less">

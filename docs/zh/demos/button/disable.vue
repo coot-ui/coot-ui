@@ -1,16 +1,16 @@
 <template>
   <div class="button-display-container">
-    <coot-button disabled>Default</coot-button>
-    <coot-button disabled type="primary">Primary</coot-button>
-    <coot-button disabled type="secondary">Secondary</coot-button>
-    <coot-button disabled type="dashed">Dashed</coot-button>
-    <coot-button disabled type="text">Text</coot-button>
-    <coot-button disabled type="link">Link</coot-button>
+    <c-button disabled>Default</c-button>
+    <c-button disabled type="primary">Primary</c-button>
+    <c-button disabled type="secondary">Secondary</c-button>
+    <c-button disabled type="dashed">Dashed</c-button>
+    <c-button disabled type="text">Text</c-button>
+    <c-button disabled type="link">Link</c-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 </script>
 
 <style scoped lang="less">

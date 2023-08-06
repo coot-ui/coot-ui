@@ -1,60 +1,59 @@
 <template>
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button>Add</coot-button>
-      <coot-button>Edit</coot-button>
-      <coot-button>Confirm</coot-button>
-      <coot-button>Delete</coot-button>
-    </coot-button-group>
+    <c-button-group>
+      <c-button>Add</c-button>
+      <c-button>Edit</c-button>
+      <c-button>Confirm</c-button>
+      <c-button>Delete</c-button>
+    </c-button-group>
   </div>
 
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button type="primary">Add</coot-button>
-      <coot-button type="primary">Edit</coot-button>
-      <coot-button type="primary">Confirm</coot-button>
-      <coot-button type="primary">Delete</coot-button>
-    </coot-button-group>
+    <c-button-group>
+      <c-button type="primary">Add</c-button>
+      <c-button type="primary">Edit</c-button>
+      <c-button type="primary">Confirm</c-button>
+      <c-button type="primary">Delete</c-button>
+    </c-button-group>
   </div>
 
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button type="secondary">Add</coot-button>
-      <coot-button type="secondary">Edit</coot-button>
-      <coot-button type="secondary">Confirm</coot-button>
-      <coot-button type="secondary">Delete</coot-button>
-    </coot-button-group>
+    <c-button-group>
+      <c-button type="secondary">Add</c-button>
+      <c-button type="secondary">Edit</c-button>
+      <c-button type="secondary">Confirm</c-button>
+      <c-button type="secondary">Delete</c-button>
+    </c-button-group>
   </div>
 
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button icon="chevron-left" type="primary" round>Prev</coot-button>
-      <coot-button type="primary" round>
+    <c-button-group>
+      <c-button icon="chevron-left" type="primary" round>Prev</c-button>
+      <c-button type="primary" round>
         Next<coot-icon-chevron-right></coot-icon-chevron-right>
-      </coot-button>
-    </coot-button-group>
+      </c-button>
+    </c-button-group>
   </div>
 
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button icon="chevron-left" type="primary" square></coot-button>
-      <coot-button icon="search" type="primary" square></coot-button>
-      <coot-button icon="download" type="primary" square></coot-button>
-      <coot-button icon="chevron-right" type="primary" square></coot-button>
-    </coot-button-group>
+    <c-button-group>
+      <c-button icon="chevron-left" type="primary" square></c-button>
+      <c-button icon="search" type="primary" square></c-button>
+      <c-button icon="download" type="primary" square></c-button>
+      <c-button icon="chevron-right" type="primary" square></c-button>
+    </c-button-group>
   </div>
 
   <div class="button-display-container">
-    <coot-button-group>
-      <coot-button type="primary">Action</coot-button>
-      <coot-button icon="chevron-down" type="primary" square></coot-button>
-    </coot-button-group>
+    <c-button-group>
+      <c-button type="primary">Action</c-button>
+      <c-button icon="chevron-down" type="primary" square></c-button>
+    </c-button-group>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
-import 'coot-ui/button-group';
+import { CButton, CButtonGroup } from '@coot-ui/vue';
 import '@coot-ui/icons/chevron-left';
 import '@coot-ui/icons/chevron-right';
 import '@coot-ui/icons/search';

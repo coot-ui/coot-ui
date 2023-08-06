@@ -1,26 +1,26 @@
 <template>
   <div>常规按钮</div>
   <div class="button-display-container">
-    <coot-button>Default</coot-button>
-    <coot-button type="primary">Primary</coot-button>
-    <coot-button type="secondary">Secondary</coot-button>
-    <coot-button type="dashed">Dashed</coot-button>
-    <coot-button type="text">Text</coot-button>
-    <coot-button type="link">Link</coot-button>
+    <c-button>Default</c-button>
+    <c-button type="primary">Primary</c-button>
+    <c-button type="secondary">Secondary</c-button>
+    <c-button type="dashed">Dashed</c-button>
+    <c-button type="text">Text</c-button>
+    <c-button type="link">Link</c-button>
   </div>
   <div>圆角按钮</div>
   <div class="button-display-container">
-    <coot-button round>Default</coot-button>
-    <coot-button round type="primary">Primary</coot-button>
-    <coot-button round type="secondary">Secondary</coot-button>
-    <coot-button round type="dashed">Dashed</coot-button>
-    <coot-button round type="text">Text</coot-button>
-    <coot-button round type="link">Link</coot-button>
+    <c-button round>Default</c-button>
+    <c-button round type="primary">Primary</c-button>
+    <c-button round type="secondary">Secondary</c-button>
+    <c-button round type="dashed">Dashed</c-button>
+    <c-button round type="text">Text</c-button>
+    <c-button round type="link">Link</c-button>
   </div>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/edit-3';
 </script>
 

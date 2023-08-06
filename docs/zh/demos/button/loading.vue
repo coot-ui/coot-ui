@@ -1,66 +1,66 @@
 <template>
   <div>加载中</div>
   <div class="button-display-container">
-    <coot-button loading>Default</coot-button>
-    <coot-button loading type="primary">Primary</coot-button>
-    <coot-button loading type="secondary">Secondary</coot-button>
-    <coot-button loading disabled type="dashed">Dashed</coot-button>
-    <coot-button loading disabled type="text">Text</coot-button>
-    <coot-button loading disabled type="link">Link</coot-button>
+    <c-button loading>Default</c-button>
+    <c-button loading type="primary">Primary</c-button>
+    <c-button loading type="secondary">Secondary</c-button>
+    <c-button loading disabled type="dashed">Dashed</c-button>
+    <c-button loading disabled type="text">Text</c-button>
+    <c-button loading disabled type="link">Link</c-button>
   </div>
   <div>点击加载</div>
   <div class="button-display-container">
-    <coot-button :loading="defaultLoading" @click="handleClickDefault()"
-      >Default</coot-button
+    <c-button :loading="defaultLoading" @click="handleClickDefault()"
+      >Default</c-button
     >
-    <coot-button
+    <c-button
       :loading="primaryLoading"
       @click="handleClickPrimary()"
       type="primary"
-      >Primary</coot-button
+      >Primary</c-button
     >
-    <coot-button
+    <c-button
       :loading="secondaryLoading"
       @click="handleClickSecondary()"
       type="secondary"
-      >Secondary</coot-button
+      >Secondary</c-button
     >
-    <coot-button
+    <c-button
       icon="download"
       :loading="defaultIconLoading"
       @click="handleClickDefaultIcon()"
-      >Default</coot-button
+      >Default</c-button
     >
-    <coot-button
+    <c-button
       icon="download"
       :loading="primaryIconLoading"
       @click="handleClickPrimaryIcon()"
       type="primary"
-      >Primary</coot-button
+      >Primary</c-button
     >
-    <coot-button
+    <c-button
       icon="download"
       :loading="secondaryIconLoading"
       @click="handleClickSecondaryIcon()"
       type="secondary"
-      >Secondary</coot-button
+      >Secondary</c-button
     >
   </div>
   <div>点击加载时固定宽度</div>
   <div class="button-display-container">
-    <coot-button
+    <c-button
       :loading="defaultFixedLoading"
       loadingFixed
       type="primary"
       @click="handleClickDefaultFixed()"
-      >Default</coot-button
+      >Default</c-button
     >
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import 'coot-ui/button';
+import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/download';
 
 const defaultLoading = ref(false);
