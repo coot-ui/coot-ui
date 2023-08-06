@@ -53,6 +53,7 @@ $button-type: primary, secondary, dashed, link, text;
       height: var(--button-size-#{$size});
       padding: 0 var(--button-horizon-padding-#{$size});
       font-size: var(--button-font-size-#{$size});
+      line-height: calc(var(--button-size-#{$size}) - 2px);
       @include when(round) {
         border-radius: calc(var(--button-size-#{$size}) / 2);
       }
