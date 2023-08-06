@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-corner-right-up')
+@defineElement('coot-icon-corner-right-up')
 export class CootIconCornerRightUp extends LitElement {
   @property({ type: Boolean })
   spin = false;

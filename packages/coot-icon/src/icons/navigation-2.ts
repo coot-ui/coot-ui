@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-navigation-2')
+@defineElement('coot-icon-navigation-2')
 export class CootIconNavigation2 extends LitElement {
   @property({ type: Boolean })
   spin = false;

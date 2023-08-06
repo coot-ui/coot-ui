@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-skip-forward')
+@defineElement('coot-icon-skip-forward')
 export class CootIconSkipForward extends LitElement {
   @property({ type: Boolean })
   spin = false;

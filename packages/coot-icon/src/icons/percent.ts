@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-percent')
+@defineElement('coot-icon-percent')
 export class CootIconPercent extends LitElement {
   @property({ type: Boolean })
   spin = false;

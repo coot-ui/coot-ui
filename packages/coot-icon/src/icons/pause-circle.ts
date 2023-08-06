@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-pause-circle')
+@defineElement('coot-icon-pause-circle')
 export class CootIconPauseCircle extends LitElement {
   @property({ type: Boolean })
   spin = false;

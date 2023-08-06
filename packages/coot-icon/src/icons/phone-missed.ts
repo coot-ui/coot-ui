@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-phone-missed')
+@defineElement('coot-icon-phone-missed')
 export class CootIconPhoneMissed extends LitElement {
   @property({ type: Boolean })
   spin = false;

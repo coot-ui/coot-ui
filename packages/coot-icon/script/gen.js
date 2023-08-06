@@ -28,10 +28,11 @@ const genContent = (filename) => {
     .join('\n');
   importCode += `import './icons/${filename}';\n`;
   const res = `import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-${filename}')
+@defineElement('coot-icon-${filename}')
 export class CootIcon${camelName} extends LitElement {
   @property({ type: Boolean })
   spin = false;

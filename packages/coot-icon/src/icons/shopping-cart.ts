@@ -1,8 +1,9 @@
 import { LitElement, html, css, unsafeCSS } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import styles from '../style.scss?inline';
+import { defineElement } from '../utils';
 
-@customElement('coot-icon-shopping-cart')
+@defineElement('coot-icon-shopping-cart')
 export class CootIconShoppingCart extends LitElement {
   @property({ type: Boolean })
   spin = false;
