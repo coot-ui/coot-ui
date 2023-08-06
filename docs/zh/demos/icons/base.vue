@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/dist/components/icons/activity';
+import '@coot-ui/icons/activity';
 </script>
 
 <style scoped lang="less">

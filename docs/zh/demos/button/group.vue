@@ -53,8 +53,8 @@
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/dist/components/button';
-import 'coot-ui/dist/components/button-group';
+import 'coot-ui/button';
+import 'coot-ui/button-group';
 import '@coot-ui/icons/chevron-left';
 import '@coot-ui/icons/chevron-right';
 import '@coot-ui/icons/search';
