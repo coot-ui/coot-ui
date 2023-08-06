@@ -1,5 +1,5 @@
 {
-  "name": "coot-ui",
+  "name": "coot-ui-monorepo",
   "version": "0.0.1",
   "main": "index.js",
   "repository": "git@github.com:coot-ui/coot-ui.git",
