@@ -6,4 +6,8 @@
 
 <script setup lang="ts">
 import 'coot-ui/button-group';
+
+defineOptions({
+  name: 'CButtonGroup',
+});
 </script>

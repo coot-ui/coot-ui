@@ -5,17 +5,15 @@
     "commonjs": true
   },
   "parserOptions": {
-    "ecmaVersion": 6,
+    "ecmaVersion": 2020,
     "sourceType": "module"
   },
-  "parser": "vue-eslint-parser",
   "extends": [
-    "plugin:vue/base",
+    "plugin:vue/vue3-essential",
     "eslint:recommended",
-    "plugin:vue/vue3-recommended",
-    "plugin:vue/essential",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended",
-    "eslint-config-prettier"
-  ]
+    "@vue/typescript/recommended"
+  ],
+  "rules": {
+    "vue/no-deprecated-slot-attribute": 0
+  }
 }

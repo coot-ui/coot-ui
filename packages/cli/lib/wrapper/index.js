@@ -9,7 +9,7 @@ const __dirname = dirname(__filename);
 
 const originComponentDir = path.resolve(__dirname, '../../../coot-ui');
 
-export const createComponent = async (name) => {
+export const wrapperComponent = async (name) => {
   const argv = [
     'analyze',
     '--litelement',

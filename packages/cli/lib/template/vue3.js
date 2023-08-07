@@ -1,21 +1,23 @@
 import prettier from 'prettier';
+import { pascalToKebab } from '../utils/index.js';
 
 export const getVue3WrapperCode = (content) => {
   const module = content.modules[0];
   const declaration = module.declarations[0];
   // 组件名称
-  const tagName = declaration.tagName.replace('coot-', '');
+  const TagName = declaration.name.replace('Coot', '');
+  const tag_name = pascalToKebab(TagName);
   // dispatch 事件
-  const events = (declaration.events || [])
-    .map((event) => `'${event.name}'`)
-    .join(', ');
+  // const events = (declaration.events || [])
+  //   .map((event) => `'${event.name}'`)
+  //   .join(', ');
   // props
   const propsType = (declaration.attributes || [])
-    .map((attr, index) => `${attr.name}: ${attr.type.text};`)
+    .map((attr) => `${attr.name}: ${attr.type.text};`)
     .join('\n');
   // props 默认值
   const defaultProps = (declaration.attributes || [])
-    .map((attr, index) => `${attr.name}: ${attr.default},`)
+    .map((attr) => `${attr.name}: ${attr.default},`)
     .join('\n');
   // 传递 props 和 events
   const attrsToPass = (declaration.attributes || [])
@@ -33,27 +35,69 @@ export const getVue3WrapperCode = (content) => {
     .filter((text) => text[0] >= 'A' && text[0] <= 'Z')
     .join(',');
 
-  const wrapper = `
+  const vueFileWrapper = `
 <template>
-  <coot-${tagName}
+  <coot-${tag_name}
    ${attrsToPass}
   >
-  </coot-${tagName}>
+  </coot-${tag_name}>
 </template>
 
 <script setup lang="ts">
-import 'coot-ui/${tagName}';
-import type { ${interfaces} } from 'coot-ui/dist/components/${tagName}/type';
+import 'coot-ui/${tag_name}';
 
-interface Props {
-  ${propsType}
-};
-
-withDefaults(defineProps<Props>(), {
-  ${defaultProps}
+defineOptions({
+  name: 'C${TagName}',
 });
+
+${
+  interfaces
+    ? `import type { ${interfaces} } from 'coot-ui/dist/components/${tag_name}/type';`
+    : ''
+}
+
+${
+  propsType
+    ? `
+    interface Props {
+      ${propsType}
+    };`
+    : ''
+}
+
+${
+  defaultProps
+    ? `
+    withDefaults(defineProps<Props>(), {
+      ${defaultProps}
+    });`
+    : ''
+}
 </script>
 `;
 
-  return prettier.format(wrapper, { parser: 'vue' });
+  const tsFileWrapper = `
+import ${TagName} from './index.vue';
+import { withInstall } from '../../utils';
+
+export const C${TagName} = withInstall(${TagName});
+export default C${TagName};
+  `;
+
+  return [
+    {
+      name: 'index.vue',
+      code: prettier.format(vueFileWrapper, {
+        parser: 'vue',
+        singleQuote: true,
+      }),
+    },
+    {
+      name: 'index.ts',
+      code: prettier.format(tsFileWrapper, {
+        parser: 'typescript',
+        singleQuote: true,
+      }),
+    },
+  ];
 };

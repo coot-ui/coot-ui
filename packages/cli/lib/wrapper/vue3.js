@@ -8,7 +8,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 export const createVue3Wrapper = (name, content) => {
-  const code = getVue3WrapperCode(content);
+  const files = getVue3WrapperCode(content);
   const targetPath = path.resolve(
     __dirname,
     '../../../coot-ui-vue/src/components'
@@ -18,6 +18,8 @@ export const createVue3Wrapper = (name, content) => {
     fs.mkdirSync(targetDir);
   }
 
-  const indexFile = path.resolve(targetDir, './index.vue');
-  fs.writeFileSync(indexFile, code, 'utf-8');
+  files.forEach((fileItem) => {
+    const file = path.resolve(targetDir, `./${fileItem.name}`);
+    fs.writeFileSync(file, fileItem.code, 'utf-8');
+  });
 };

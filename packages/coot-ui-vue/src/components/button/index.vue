@@ -20,6 +20,11 @@
 
 <script setup lang="ts">
 import 'coot-ui/button';
+
+defineOptions({
+  name: 'CButton',
+});
+
 import type {
   ButtonType,
   ButtonStatus,
