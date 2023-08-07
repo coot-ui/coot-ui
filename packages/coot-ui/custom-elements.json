@@ -1,0 +1,268 @@
+{
+  "schemaVersion": "1.0.0",
+  "readme": "",
+  "modules": [
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/index.ts",
+      "declarations": [
+        {
+          "kind": "class",
+          "description": "",
+          "name": "CootButton",
+          "members": [
+            {
+              "kind": "field",
+              "name": "type",
+              "type": {
+                "text": "ButtonType"
+              },
+              "default": "'default'",
+              "attribute": "type"
+            },
+            {
+              "kind": "field",
+              "name": "status",
+              "type": {
+                "text": "ButtonStatus"
+              },
+              "default": "'primary'",
+              "attribute": "status"
+            },
+            {
+              "kind": "field",
+              "name": "size",
+              "type": {
+                "text": "ButtonSize"
+              },
+              "default": "'default'",
+              "attribute": "size"
+            },
+            {
+              "kind": "field",
+              "name": "round",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "round"
+            },
+            {
+              "kind": "field",
+              "name": "circle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "circle"
+            },
+            {
+              "kind": "field",
+              "name": "square",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "square"
+            },
+            {
+              "kind": "field",
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "disabled"
+            },
+            {
+              "kind": "field",
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "loading"
+            },
+            {
+              "kind": "field",
+              "name": "loadingFixed",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "loadingFixed"
+            },
+            {
+              "kind": "field",
+              "name": "long",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "attribute": "long"
+            },
+            {
+              "kind": "field",
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "attribute": "icon"
+            },
+            {
+              "kind": "field",
+              "name": "ns"
+            },
+            {
+              "kind": "method",
+              "name": "test"
+            },
+            {
+              "kind": "field",
+              "name": "classes"
+            },
+            {
+              "kind": "method",
+              "name": "renderIcon"
+            }
+          ],
+          "events": [
+            {
+              "name": "testEvent",
+              "type": {
+                "text": "CustomEvent"
+              }
+            }
+          ],
+          "attributes": [
+            {
+              "name": "type",
+              "type": {
+                "text": "ButtonType"
+              },
+              "default": "'default'",
+              "fieldName": "type"
+            },
+            {
+              "name": "status",
+              "type": {
+                "text": "ButtonStatus"
+              },
+              "default": "'primary'",
+              "fieldName": "status"
+            },
+            {
+              "name": "size",
+              "type": {
+                "text": "ButtonSize"
+              },
+              "default": "'default'",
+              "fieldName": "size"
+            },
+            {
+              "name": "round",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "round"
+            },
+            {
+              "name": "circle",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "circle"
+            },
+            {
+              "name": "square",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "square"
+            },
+            {
+              "name": "disabled",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "disabled"
+            },
+            {
+              "name": "loading",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "loading"
+            },
+            {
+              "name": "loadingFixed",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "loadingFixed"
+            },
+            {
+              "name": "long",
+              "type": {
+                "text": "boolean"
+              },
+              "default": "false",
+              "fieldName": "long"
+            },
+            {
+              "name": "icon",
+              "type": {
+                "text": "string"
+              },
+              "default": "''",
+              "fieldName": "icon"
+            }
+          ],
+          "superclass": {
+            "name": "LitElement",
+            "package": "lit"
+          },
+          "tagName": "coot-button",
+          "customElement": true
+        }
+      ],
+      "exports": [
+        {
+          "kind": "js",
+          "name": "CootButton",
+          "declaration": {
+            "name": "CootButton",
+            "module": "src/components/button/index.ts"
+          }
+        },
+        {
+          "kind": "custom-element-definition",
+          "name": "coot-button",
+          "declaration": {
+            "name": "CootButton",
+            "module": "src/components/button/index.ts"
+          }
+        }
+      ]
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/style.scss",
+      "declarations": [],
+      "exports": []
+    },
+    {
+      "kind": "javascript-module",
+      "path": "src/components/button/type.ts",
+      "declarations": [],
+      "exports": []
+    }
+  ]
+}

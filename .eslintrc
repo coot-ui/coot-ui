@@ -8,5 +8,14 @@
     "ecmaVersion": 6,
     "sourceType": "module"
   },
-  "parser": "@typescript-eslint/parser"
+  "parser": "vue-eslint-parser",
+  "extends": [
+    "plugin:vue/base",
+    "eslint:recommended",
+    "plugin:vue/vue3-recommended",
+    "plugin:vue/essential",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "eslint-config-prettier"
+  ]
 }

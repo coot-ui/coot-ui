@@ -19,6 +19,9 @@ export default {
 
   enhanceApp({ app, router, siteData }) {
     // ...
+    app.config.compilerOptions.isCustomElement = (tag) => {
+      return tag.startsWith('coot-');
+    };
     app.component('icon-list', IconList);
     app.component('demo-box', VitepressDemoBox);
   },

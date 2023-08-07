@@ -1,11 +1,10 @@
 import { LitElement, html, unsafeCSS, css } from 'lit';
-import { customElement } from 'lit/decorators.js';
 
-import { useNamespace, classString } from '@/utils';
+import { useNamespace, classString, defineElement } from '@/utils';
 
 import styles from './style.scss?inline';
 
-@customElement('coot-button-group')
+@defineElement('coot-button-group')
 export class CootButtonGroup extends LitElement {
   ns = useNamespace('button-group');
 

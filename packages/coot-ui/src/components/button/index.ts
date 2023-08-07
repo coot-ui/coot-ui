@@ -1,16 +1,16 @@
 import { LitElement, html, unsafeCSS, css } from 'lit';
-import { customElement, property } from 'lit/decorators.js';
+import { property } from 'lit/decorators.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 import '@coot-ui/icons/spin';
 
-import { useNamespace, classString } from '@/utils';
+import { useNamespace, classString, defineElement } from '@/utils';
 
 import styles from './style.scss?inline';
 
 import { ButtonType, ButtonStatus, ButtonSize } from './type';
 
-@customElement('coot-button')
+@defineElement('coot-button')
 export class CootButton extends LitElement {
   @property({ type: String })
   type: ButtonType = 'default';
