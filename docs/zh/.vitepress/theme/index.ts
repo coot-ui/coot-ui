@@ -3,7 +3,7 @@ import { h } from 'vue';
 import Theme from 'vitepress/theme';
 // import HomeHeroAfter from '../components/home-hero-after.vue';
 import IconList from '../components/icon-list.vue';
-import './style.css';
+import './style.scss';
 import { VitepressDemoBox } from 'vitepress-demo-box';
 import 'vitepress-demo-box/dist/style.css';
 import '../../../../packages/coot-ui/src/style/index.scss';

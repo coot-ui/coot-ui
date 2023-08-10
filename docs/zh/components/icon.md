@@ -7,3 +7,4 @@
 <icon-list></icon-list>
 
 <demo path="../demos/icons/base.vue"></demo>
+

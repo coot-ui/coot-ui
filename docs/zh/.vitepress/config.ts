@@ -40,7 +40,7 @@ export default defineConfig({
     search: {
       provider: 'local',
     },
-    secondary: [2, 3],
+    outline: [2, 3],
     sidebar: [
       {
         text: '通用',
