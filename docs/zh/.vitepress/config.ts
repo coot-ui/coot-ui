@@ -17,13 +17,13 @@ function getComponentsAlias() {
       return fileObj.name;
     })
     .forEach((name) => {
-      // compAlias[`coot-ui/${name}`] = path.resolve(
-      //   __dirname,
-      //   '../../../packages/coot-ui-vue/src/components/' + name
-      // );
       compAlias[`coot-ui/${name}`] = path.resolve(
         __dirname,
         '../../../packages/coot-ui/src/components/' + name
+      );
+      compAlias[`coot-ui/dist`] = path.resolve(
+        __dirname,
+        '../../../packages/coot-ui/src'
       );
     });
   return compAlias;

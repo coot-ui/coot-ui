@@ -1,5 +1,5 @@
 <template>
-  <coot-button-group v-bind="$attrs">
+  <coot-button-group :size.prop="size">
     <slot></slot>
   </coot-button-group>
 </template>

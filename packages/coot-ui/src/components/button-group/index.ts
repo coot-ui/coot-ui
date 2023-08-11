@@ -3,6 +3,7 @@ import { property } from 'lit/decorators.js';
 
 import { useNamespace, classString, defineElement } from '@/utils';
 import { ButtonSize } from '../button/type';
+import { CootButton } from '../button';
 
 import styles from './style.scss?inline';
 
@@ -17,8 +18,15 @@ export class CootButtonGroup extends LitElement {
     [this.ns.b()]: true,
   });
 
-  handleSlotChange(e) {
-    console.log(e);
+  handleSlotChange(event: any) {
+    const slot = event.target;
+    const assignedNodes = slot.assignedNodes({ flatten: true });
+
+    assignedNodes.forEach((node: CootButton) => {
+      if (node.tagName === 'COOT-BUTTON') {
+        node.size = this.size;
+      }
+    });
   }
 
   render() {

@@ -45,7 +45,7 @@
   </div>
 
   <div class="button-display-container">
-    <c-button-group size="small">
+    <c-button-group>
       <c-button type="primary">Action</c-button>
       <c-button icon="chevron-down" type="primary" square></c-button>
     </c-button-group>

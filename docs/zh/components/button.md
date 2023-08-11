@@ -79,6 +79,16 @@
 
 </div>
 
+### ButtonGroup 属性
+
+<div class="table-col-5">
+
+| 属性 | 类型     | 说明           | 可选值                           | 默认值    |
+| ---- | -------- | -------------- | -------------------------------- | --------- |
+| size | `string` | 组合按钮的尺寸 | `default`/`small`/`mini`/`large` | `default` |
+
+</div>
+
 ### ButtonGroup 插槽
 
 <div class="table-col-3">
