@@ -60,7 +60,6 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/download';
 
 const defaultLoading = ref(false);

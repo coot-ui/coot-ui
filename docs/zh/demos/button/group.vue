@@ -45,7 +45,7 @@
   </div>
 
   <div class="button-display-container">
-    <c-button-group>
+    <c-button-group size="small">
       <c-button type="primary">Action</c-button>
       <c-button icon="chevron-down" type="primary" square></c-button>
     </c-button-group>
@@ -53,7 +53,6 @@
 </template>
 
 <script setup lang="ts">
-import { CButton, CButtonGroup } from '@coot-ui/vue';
 import '@coot-ui/icons/chevron-left';
 import '@coot-ui/icons/chevron-right';
 import '@coot-ui/icons/search';

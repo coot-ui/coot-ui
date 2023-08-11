@@ -29,7 +29,6 @@
 </template>
 
 <script setup lang="ts">
-import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/search';
 import '@coot-ui/icons/download';
 import '@coot-ui/icons/chevron-left';

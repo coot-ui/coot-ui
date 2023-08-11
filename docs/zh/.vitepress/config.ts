@@ -21,9 +21,9 @@ function getComponentsAlias() {
       //   __dirname,
       //   '../../../packages/coot-ui-vue/src/components/' + name
       // );
-      compAlias[`@coot-ui/vue/${name}`] = path.resolve(
+      compAlias[`coot-ui/${name}`] = path.resolve(
         __dirname,
-        '../../../packages/coot-ui-vue/src/components/' + name
+        '../../../packages/coot-ui/src/components/' + name
       );
     });
   return compAlias;

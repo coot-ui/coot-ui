@@ -7,6 +7,7 @@ import './style.scss';
 import { VitepressDemoBox } from 'vitepress-demo-box';
 import 'vitepress-demo-box/dist/style.css';
 import '../../../../packages/coot-ui/src/style/index.scss';
+import CootUI from '../../../../packages/coot-ui-vue/src/index';
 
 export default {
   ...Theme,
@@ -24,5 +25,6 @@ export default {
     };
     app.component('icon-list', IconList);
     app.component('demo-box', VitepressDemoBox);
+    app.use(CootUI);
   },
 };

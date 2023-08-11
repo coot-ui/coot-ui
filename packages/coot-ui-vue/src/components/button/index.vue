@@ -11,7 +11,6 @@
     :loadingFixed.prop="loadingFixed"
     :long.prop="long"
     :icon.prop="icon"
-    @testEvent="(e: any) => $emit('testEvent', e.detail)"
   >
     <slot name="icon" slot="icon"></slot>
     <slot></slot>

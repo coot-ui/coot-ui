@@ -20,7 +20,6 @@
 </template>
 
 <script setup lang="ts">
-import { CButton } from '@coot-ui/vue';
 import '@coot-ui/icons/edit-3';
 </script>
 

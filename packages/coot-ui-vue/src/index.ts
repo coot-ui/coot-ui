@@ -1,2 +1,5 @@
-export * from './components/button';
-export * from './components/button-group';
+import installer from './register';
+export * from './components';
+
+export const install = installer.install;
+export default installer;

@@ -47,10 +47,6 @@ export class CootButton extends LitElement {
 
   ns = useNamespace('button');
 
-  test() {
-    this.dispatchEvent(new CustomEvent('testEvent', { detail: 'ok' }));
-  }
-
   classes = () => ({
     [this.ns.b()]: true,
     [this.ns.m(`type-${this.type}`)]: true,

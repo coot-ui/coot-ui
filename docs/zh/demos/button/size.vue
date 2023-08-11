@@ -37,9 +37,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import { CButton } from '@coot-ui/vue';
-</script>
+<script setup lang="ts"></script>
 
 <style scoped lang="less">
 .button-display-container {
