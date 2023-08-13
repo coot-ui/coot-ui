@@ -93,13 +93,13 @@
   --#{$prefix}-success-disable: var(--#{$prefix}-green-3);
   --#{$prefix}-success-lighter: var(--#{$prefix}-green-1);
   --#{$prefix}-success-light: var(--#{$prefix}-green-2);
-  // danger
-  --#{$prefix}-danger: var(--#{$prefix}-red-6);
-  --#{$prefix}-danger-hover: var(--#{$prefix}-red-5);
-  --#{$prefix}-danger-active: var(--#{$prefix}-red-7);
-  --#{$prefix}-danger-disable: var(--#{$prefix}-red-3);
-  --#{$prefix}-danger-lighter: var(--#{$prefix}-red-1);
-  --#{$prefix}-danger-light: var(--#{$prefix}-red-2);
+  // error
+  --#{$prefix}-error: var(--#{$prefix}-red-6);
+  --#{$prefix}-error-hover: var(--#{$prefix}-red-5);
+  --#{$prefix}-error-active: var(--#{$prefix}-red-7);
+  --#{$prefix}-error-disable: var(--#{$prefix}-red-3);
+  --#{$prefix}-error-lighter: var(--#{$prefix}-red-1);
+  --#{$prefix}-error-light: var(--#{$prefix}-red-2);
   // warning
   --#{$prefix}-warning: var(--#{$prefix}-orange-6);
   --#{$prefix}-warning-hover: var(--#{$prefix}-orange-5);

@@ -4,7 +4,7 @@ $group: #{$prefix}-button-group;
 $button: #{$prefix}-button;
 $button-square: #{$prefix}-is-square;
 $button-circle: #{$prefix}-is-circle;
-$button-status: primary, success, danger, warning;
+$button-status: primary, success, error, warning;
 
 #{$group} {
   #{$button} {

@@ -16,12 +16,12 @@
     <c-button status="success" type="link">Link</c-button>
   </div>
   <div class="button-display-container">
-    <c-button status="danger">Default</c-button>
-    <c-button status="danger" type="primary">Primary</c-button>
-    <c-button status="danger" type="secondary">Secondary</c-button>
-    <c-button status="danger" type="dashed">Dashed</c-button>
-    <c-button status="danger" type="text">Text</c-button>
-    <c-button status="danger" type="link">Link</c-button>
+    <c-button status="error">Default</c-button>
+    <c-button status="error" type="primary">Primary</c-button>
+    <c-button status="error" type="secondary">Secondary</c-button>
+    <c-button status="error" type="dashed">Dashed</c-button>
+    <c-button status="error" type="text">Text</c-button>
+    <c-button status="error" type="link">Link</c-button>
   </div>
   <div class="button-display-container">
     <c-button status="warning">Default</c-button>

@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
-import { markdownDemo } from 'vitepress-demo-box';
+// import { markdownDemo } from 'vitepress-demo-box';
+import { markdownDemo } from '../../../../vitepress-demo-box';
 import path from 'path';
 import fs from 'fs';
 import { Alias } from '../../../packages/coot-ui/vite.config';
@@ -68,7 +69,9 @@ export default defineConfig({
   },
   markdown: {
     config(md) {
-      md.use(markdownDemo);
+      md.use(markdownDemo, {
+        demoRoot: path.resolve(__dirname, '../demos'),
+      });
     },
   },
   vite: {

@@ -8,6 +8,6 @@ export type ButtonType =
   | 'text'
   | 'link';
 
-export type ButtonStatus = 'primary' | 'success' | 'warning' | 'danger';
+export type ButtonStatus = 'primary' | 'success' | 'warning' | 'error';
 
 export type ButtonSize = ComponentSize;
