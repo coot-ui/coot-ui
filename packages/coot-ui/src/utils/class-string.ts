@@ -4,7 +4,7 @@ interface ClassMap {
 
 export const classString = (classMap: ClassMap) => {
   const classes: string[] = [];
-  for (let name in classMap) {
+  for (const name in classMap) {
     if (classMap[name as keyof typeof classMap]) {
       classes.push(name);
     }

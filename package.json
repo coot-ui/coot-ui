@@ -36,7 +36,10 @@
   "scripts": {
     "prepare": "npx husky install",
     "wrapper": "coot-cli wrapper",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "dev:docs": "cd ./docs/zh && pnpm docs:dev",
+    "dev:lit": "cd ./packages/coot-ui && pnpm build:watch",
+    "dev:vue": "cd ./packages/coot-ui-vue && pnpm build:watch"
   },
   "config": {
     "commitizen": {

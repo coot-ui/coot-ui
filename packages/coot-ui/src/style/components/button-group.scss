@@ -50,18 +50,22 @@ $button-status: primary, success, error, warning;
     }
   }
   #{$button}:last-of-type {
-    &::part(#{$button}) {
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-    &:hover {
-      z-index: 3;
+    &:not(&:first-of-type) {
+      &::part(#{$button}) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+      }
+      &:hover {
+        z-index: 3;
+      }
     }
   }
   #{$button}:first-of-type {
-    &::part(#{$button}) {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
+    &:not(&:last-of-type) {
+      &::part(#{$button}) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
     }
   }
 }

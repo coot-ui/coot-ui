@@ -1,11 +1,15 @@
 import { LitElement, html, unsafeCSS, css } from 'lit';
 import { property } from 'lit/decorators.js';
 
-import { useNamespace, classString, defineElement } from '@/utils';
+import { useNamespace, classString, defineElement, injectStyle } from '@/utils';
 import { ButtonSize } from '../button/type';
 import { CootButton } from '../button';
 
 import styles from './style.scss?inline';
+import '@/style/components/button-group.scss';
+
+import ButtonGroupStyle from '@/style/components/button-group.scss?inline';
+injectStyle(ButtonGroupStyle, '@/style/components/button-group.scss');
 
 @defineElement('coot-button-group')
 export class CootButtonGroup extends LitElement {

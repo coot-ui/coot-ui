@@ -1,34 +1,6 @@
 import { defineConfig } from 'vitepress';
-// import { markdownDemo } from 'vitepress-demo-box';
-import { markdownDemo } from '../../../../vitepress-demo-box';
+import { markdownDemo } from 'vitepress-demo-box';
 import path from 'path';
-import fs from 'fs';
-import { Alias } from '../../../packages/coot-ui/vite.config';
-import vue from '@vitejs/plugin-vue';
-
-// 开发环境下，将 @coot-ui/xxx 映射到 coot-ui 目录下对应组件
-function getComponentsAlias() {
-  const compAlias = { ...Alias };
-  fs.readdirSync(
-    path.resolve(__dirname, '../../../packages/coot-ui-vue/src/components'),
-    'utf-8'
-  )
-    .map((file) => {
-      const fileObj = path.parse(file);
-      return fileObj.name;
-    })
-    .forEach((name) => {
-      compAlias[`coot-ui/${name}`] = path.resolve(
-        __dirname,
-        '../../../packages/coot-ui/src/components/' + name
-      );
-      compAlias[`coot-ui/dist`] = path.resolve(
-        __dirname,
-        '../../../packages/coot-ui/src'
-      );
-    });
-  return compAlias;
-}
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -74,21 +46,5 @@ export default defineConfig({
       });
     },
   },
-  vite: {
-    resolve: {
-      alias: {
-        ...getComponentsAlias(),
-      },
-    },
-    // plugins: [
-    //   vue({
-    //     template: {
-    //       compilerOptions: {
-    //         // 将所有带短横线的标签名都视为自定义元素
-    //         isCustomElement: (tag) => tag.startsWith('coot-'),
-    //       },
-    //     },
-    //   }),
-    // ],
-  },
+  vite: {},
 });

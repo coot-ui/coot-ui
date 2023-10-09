@@ -16,6 +16,9 @@ const componentsDirs = fs.readdirSync(
 const componentEntries = {};
 
 for (const comp of componentsDirs) {
+  if (comp === 'index.ts') {
+    continue;
+  }
   componentEntries[
     `components/${comp}/index`
   ] = `./src/components/${comp}/index.ts`;
