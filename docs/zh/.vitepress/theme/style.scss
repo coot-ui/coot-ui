@@ -89,6 +89,18 @@
   --docsearch-primary-color: var(--vp-c-brand) !important;
 }
 
+.VPDoc {
+  & > .container {
+    & > .content {
+      padding-left: 0;
+      padding-right: 0;
+      .content-container {
+        min-width: 100% !important;
+      }
+    }
+  }
+}
+
 .table-col-2,
 .table-col-3,
 .table-col-4,

@@ -22,6 +22,10 @@ export default defineConfig({
           { text: 'Button 按钮', link: '/components/button.md' },
         ],
       },
+      {
+        text: '其他',
+        items: [{ text: 'Popper 弹出层', link: '/components/popper.md' }],
+      },
     ],
 
     socialLinks: [

@@ -6,7 +6,6 @@ import { ButtonSize } from '../button/type';
 import { CootButton } from '../button';
 
 import styles from './style.scss?inline';
-import '@/style/components/button-group.scss';
 
 import ButtonGroupStyle from '@/style/components/button-group.scss?inline';
 injectStyle(ButtonGroupStyle, '@/style/components/button-group.scss');

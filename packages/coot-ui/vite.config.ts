@@ -24,7 +24,7 @@ export default defineConfig({
   plugins: [dts()],
   build: {
     target: 'modules',
-    emptyOutDir: true,
+    emptyOutDir: false,
     lib: {
       entry: {
         ...componentEntries,

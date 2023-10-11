@@ -1,0 +1,10 @@
+@use '~@/style/mixin.scss' as *;
+
+@include b(popper) {
+  position: relative;
+
+  @include m(content) {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}

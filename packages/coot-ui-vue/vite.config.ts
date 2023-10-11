@@ -38,7 +38,7 @@ export default defineConfig({
   ],
   build: {
     target: 'modules',
-    emptyOutDir: true,
+    emptyOutDir: false,
     lib: {
       entry: {
         ...componentEntries,

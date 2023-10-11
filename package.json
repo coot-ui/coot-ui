@@ -12,6 +12,7 @@
     "@typescript-eslint/eslint-plugin": "^6.2.1",
     "@typescript-eslint/parser": "^5.59.9",
     "@vue/eslint-config-typescript": "^11.0.3",
+    "chalk": "^5.3.0",
     "commitizen": "^4.2.5",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.26.0",
@@ -37,9 +38,7 @@
     "prepare": "npx husky install",
     "wrapper": "coot-cli wrapper",
     "commit": "git add . && git-cz",
-    "dev:docs": "cd ./docs/zh && pnpm docs:dev",
-    "dev:lit": "cd ./packages/coot-ui && pnpm build:watch",
-    "dev:vue": "cd ./packages/coot-ui-vue && pnpm build:watch"
+    "dev": "cd ./scripts && node ./dev"
   },
   "config": {
     "commitizen": {
