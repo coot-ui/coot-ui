@@ -5,48 +5,48 @@
     Hiragino Sans GB, Microsoft YaHei, Arial, sans-serif;
   // color
   --#{$prefix}-green-1: #e8ffea;
-  --#{$prefix}-green-2: #bdf3c2;
-  --#{$prefix}-green-3: #95e7a0;
-  --#{$prefix}-green-4: #70dc82;
-  --#{$prefix}-green-5: #4fd068;
-  --#{$prefix}-green-6: #30c453;
-  --#{$prefix}-green-7: #1fa643;
-  --#{$prefix}-green-8: #118835;
-  --#{$prefix}-green-9: #076a28;
+  --#{$prefix}-green-2: #aff0b5;
+  --#{$prefix}-green-3: #7be188;
+  --#{$prefix}-green-4: #4cd263;
+  --#{$prefix}-green-5: #23c343;
+  --#{$prefix}-green-6: #00b42a;
+  --#{$prefix}-green-7: #009a29;
+  --#{$prefix}-green-8: #008026;
+  --#{$prefix}-green-9: #006622;
   --#{$prefix}-green-10: #004d1c;
 
   --#{$prefix}-blue-1: #e8f5ff;
-  --#{$prefix}-blue-2: #bae0ff;
-  --#{$prefix}-blue-3: #8bc7ff;
-  --#{$prefix}-blue-4: #5dabff;
-  --#{$prefix}-blue-5: #2e8cff;
-  --#{$prefix}-blue-6: #006aff;
-  --#{$prefix}-blue-7: #0051d2;
-  --#{$prefix}-blue-8: #003aa6;
-  --#{$prefix}-blue-9: #002679;
+  --#{$prefix}-blue-2: #bee2ff;
+  --#{$prefix}-blue-3: #94cbff;
+  --#{$prefix}-blue-4: #6ab2ff;
+  --#{$prefix}-blue-5: #4096ff;
+  --#{$prefix}-blue-6: #1677ff;
+  --#{$prefix}-blue-7: #0e59d2;
+  --#{$prefix}-blue-8: #073fa6;
+  --#{$prefix}-blue-9: #032879;
   --#{$prefix}-blue-10: #00164d;
 
-  --#{$prefix}-red-1: #ffeee8;
-  --#{$prefix}-red-2: #fed2c6;
-  --#{$prefix}-red-3: #fdb4a3;
-  --#{$prefix}-red-4: #fc9481;
-  --#{$prefix}-red-5: #fb725f;
-  --#{$prefix}-red-6: #fa4e3e;
-  --#{$prefix}-red-7: #cf2f26;
-  --#{$prefix}-red-8: #a31714;
-  --#{$prefix}-red-9: #780709;
-  --#{$prefix}-red-10: #4d0004;
+  --#{$prefix}-red-1: #ffece8;
+  --#{$prefix}-red-2: #fdcdc5;
+  --#{$prefix}-red-3: #fbaca3;
+  --#{$prefix}-red-4: #f98981;
+  --#{$prefix}-red-5: #f76560;
+  --#{$prefix}-red-6: #f53f3f;
+  --#{$prefix}-red-7: #cb272d;
+  --#{$prefix}-red-8: #a1151e;
+  --#{$prefix}-red-9: #770813;
+  --#{$prefix}-red-10: #4d000a;
 
-  --#{$prefix}-orange-1: #fffbe8;
-  --#{$prefix}-orange-2: #fff1ba;
-  --#{$prefix}-orange-3: #ffe48b;
-  --#{$prefix}-orange-4: #ffd45d;
-  --#{$prefix}-orange-5: #ffc02e;
-  --#{$prefix}-orange-6: #ffaa00;
-  --#{$prefix}-orange-7: #d28500;
-  --#{$prefix}-orange-8: #a66300;
-  --#{$prefix}-orange-9: #794500;
-  --#{$prefix}-orange-10: #4d2900;
+  --#{$prefix}-orange-1: #fff7e8;
+  --#{$prefix}-orange-2: #ffe4ba;
+  --#{$prefix}-orange-3: #ffcf8b;
+  --#{$prefix}-orange-4: #ffb65d;
+  --#{$prefix}-orange-5: #ff9a2e;
+  --#{$prefix}-orange-6: #ff7d00;
+  --#{$prefix}-orange-7: #d25f00;
+  --#{$prefix}-orange-8: #a64500;
+  --#{$prefix}-orange-9: #792e00;
+  --#{$prefix}-orange-10: #4d1b00;
 
   --#{$prefix}-gray-1: #fafafa;
   --#{$prefix}-gray-2: #f5f5f5;
@@ -86,6 +86,8 @@
   --#{$prefix}-primary-disable: var(--#{$prefix}-blue-3);
   --#{$prefix}-primary-lighter: var(--#{$prefix}-blue-1);
   --#{$prefix}-primary-light: var(--#{$prefix}-blue-2);
+  --#{$prefix}-primary-bg: var(--#{$prefix}-blue-0);
+
   // success
   --#{$prefix}-success: var(--#{$prefix}-green-6);
   --#{$prefix}-success-hover: var(--#{$prefix}-green-5);
@@ -93,6 +95,7 @@
   --#{$prefix}-success-disable: var(--#{$prefix}-green-3);
   --#{$prefix}-success-lighter: var(--#{$prefix}-green-1);
   --#{$prefix}-success-light: var(--#{$prefix}-green-2);
+  --#{$prefix}-success-bg: var(--#{$prefix}-green-0);
   // error
   --#{$prefix}-error: var(--#{$prefix}-red-6);
   --#{$prefix}-error-hover: var(--#{$prefix}-red-5);
@@ -100,6 +103,7 @@
   --#{$prefix}-error-disable: var(--#{$prefix}-red-3);
   --#{$prefix}-error-lighter: var(--#{$prefix}-red-1);
   --#{$prefix}-error-light: var(--#{$prefix}-red-2);
+  --#{$prefix}-error-bg: var(--#{$prefix}-red-0);
   // warning
   --#{$prefix}-warning: var(--#{$prefix}-orange-6);
   --#{$prefix}-warning-hover: var(--#{$prefix}-orange-5);
@@ -107,6 +111,7 @@
   --#{$prefix}-warning-disable: var(--#{$prefix}-orange-3);
   --#{$prefix}-warning-lighter: var(--#{$prefix}-orange-1);
   --#{$prefix}-warning-light: var(--#{$prefix}-orange-2);
+  --#{$prefix}-warning-bg: var(--#{$prefix}-orange-0);
 
   // height
   --#{$prefix}-height-default: 32px;

@@ -9,6 +9,7 @@ import { useNamespace, classString, defineElement } from '@/utils';
 import styles from './style.scss?inline';
 
 import { ButtonType, ButtonStatus, ButtonSize } from './type';
+import '../ripple';
 
 @defineElement('coot-button')
 export class CootButton extends LitElement {
@@ -73,6 +74,13 @@ export class CootButton extends LitElement {
     }
   }
 
+  renderRipple() {
+    if (this.type === 'link' || this.loading || this.disabled) {
+      return null;
+    }
+    return html`<coot-ripple style="margin-left: -4px;"></coot-ripple>`;
+  }
+
   render() {
     return html`<button
       class=${classString(this.classes())}
@@ -80,6 +88,7 @@ export class CootButton extends LitElement {
     >
       ${this.renderIcon()}
       <slot></slot>
+      ${this.renderRipple()}
     </button>`;
   }
 

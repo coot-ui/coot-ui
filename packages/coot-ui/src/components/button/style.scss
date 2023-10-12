@@ -13,6 +13,7 @@ $button-type: primary, secondary, dashed, link, text;
     --button-#{$status}-hover: var(--#{$prefix}-#{$status}-hover);
     --button-#{$status}-active: var(--#{$prefix}-#{$status}-active);
     --button-#{$status}-disable: var(--#{$prefix}-#{$status}-disable);
+    --button-#{$status}-bg: var(--#{$prefix}-#{$status}-lighter);
   }
 
   @each $size in $component-size {
@@ -35,7 +36,6 @@ $button-type: primary, secondary, dashed, link, text;
   align-items: center;
   justify-content: center;
   column-gap: 4px;
-  justify-content: center;
   box-sizing: border-box;
   border: 1px solid var(--button-border);
   border-radius: var(--button-radius);
@@ -43,6 +43,7 @@ $button-type: primary, secondary, dashed, link, text;
   color: var(--button-text-color);
   cursor: pointer;
   font-family: var(--button-font-family);
+  overflow: hidden;
 
   @include when(long) {
     width: 100%;
@@ -54,6 +55,14 @@ $button-type: primary, secondary, dashed, link, text;
       padding: 0 var(--button-horizon-padding-#{$size});
       font-size: var(--button-font-size-#{$size});
       line-height: calc(var(--button-size-#{$size}) - 2px);
+      &.#{$prefix}-button-type-text,
+      &.#{$prefix}-button-type-link,
+      &.#{$prefix}-button-type-primary,
+      &.#{$prefix}-button-type-secondary:not(.#{$prefix}-is-loading):not(
+          .#{$prefix}-is-disabled
+        ):hover {
+        padding: 0 calc(var(--button-horizon-padding-#{$size}) + 1px);
+      }
       @include when(round) {
         border-radius: calc(var(--button-size-#{$size}) / 2);
       }
@@ -61,13 +70,22 @@ $button-type: primary, secondary, dashed, link, text;
         border-radius: calc(var(--button-size-#{$size}) / 2);
         padding: 0;
         min-width: var(--button-size-#{$size});
+        &:hover {
+          padding: 0;
+        }
       }
       @include when(square) {
         padding: 0;
         min-width: var(--button-size-#{$size});
+        &:hover {
+          padding: 0;
+        }
       }
       @include when(loading-fixed) {
         padding: 0 calc(var(--button-horizon-padding-#{$size}) - 0.5em - 2px);
+        &:hover {
+          padding: 0 calc(var(--button-horizon-padding-#{$size}) - 0.5em - 2px);
+        }
       }
     }
   }
@@ -75,8 +93,11 @@ $button-type: primary, secondary, dashed, link, text;
   @each $type in $button-type {
     @include m(type-#{$type}) {
       color: var(--button-primary);
-      border-color: var(--button-primary);
     }
+  }
+
+  @include m(type-primary) {
+    border-width: 0;
   }
 
   @include m(type-dashed) {
@@ -95,6 +116,7 @@ $button-type: primary, secondary, dashed, link, text;
     @include m(status-#{$status}) {
       color: var(--button-#{$status});
       border-color: var(--button-#{$status});
+
       @include when(disabled) {
         cursor: not-allowed;
         &,
@@ -116,31 +138,34 @@ $button-type: primary, secondary, dashed, link, text;
           }
         }
       }
-      &.#{$prefix}-button-type-text {
-        color: var(--button-text-color);
-        @include when(disabled) {
-          color: var(--button-text-disable);
+      &:hover {
+        color: var(--button-#{$status});
+        border-color: var(--button-#{$status});
+      }
+
+      &.#{$prefix}-button-type-link {
+        &:hover {
+          color: var(--button-#{$status}-hover);
+          border-color: var(--button-#{$status}-hover);
+        }
+        &:active {
+          color: var(--button-#{$status}-active);
+          border-color: var(--button-#{$status}-active);
         }
       }
-      &:hover {
-        color: var(--button-#{$status}-hover);
-        border-color: var(--button-#{$status}-hover);
-      }
-      &:active {
-        color: var(--button-#{$status}-active);
-        border-color: var(--button-#{$status}-active);
+
+      &.#{$prefix}-button-type-text {
+        &:hover {
+          background-color: var(--button-#{$status}-bg);
+        }
       }
 
       &.#{$prefix}-button-type-primary {
         color: white;
         background-color: var(--button-#{$status});
         &:hover {
+          color: white;
           background-color: var(--button-#{$status}-hover);
-          color: white;
-        }
-        &:active {
-          background-color: var(--button-#{$status}-active);
-          color: white;
         }
         @include when(disabled) {
           &,
@@ -153,13 +178,8 @@ $button-type: primary, secondary, dashed, link, text;
 
       &.#{$prefix}-button-type-secondary {
         &:hover {
-          border-color: var(--button-#{$status});
+          border-style: none;
           background-color: var(--button-#{$status});
-          color: white;
-        }
-        &:active {
-          border-color: var(--button-#{$status}-active);
-          background-color: var(--button-#{$status}-active);
           color: white;
         }
         @include when(disabled) {
@@ -169,6 +189,12 @@ $button-type: primary, secondary, dashed, link, text;
             color: var(--button-#{$status}-disable);
             border-color: var(--button-#{$status}-disable);
             background-color: transparent;
+            border-style: solid;
+          }
+        }
+        @include when(loading) {
+          &:hover {
+            border-style: solid;
           }
         }
       }
