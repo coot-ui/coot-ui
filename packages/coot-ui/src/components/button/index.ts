@@ -81,15 +81,21 @@ export class CootButton extends LitElement {
     return html`<coot-ripple style="margin-left: -4px;"></coot-ripple>`;
   }
 
-  render() {
+  renderButton() {
     return html`<button
       class=${classString(this.classes())}
       part=${classString(this.classes())}
     >
       ${this.renderIcon()}
       <slot></slot>
-      ${this.renderRipple()}
     </button>`;
+  }
+
+  render() {
+    if (this.type === 'link' || this.loading || this.disabled) {
+      return this.renderButton();
+    }
+    return html`<coot-ripple>${this.renderButton()}</coot-ripple>`;
   }
 
   static styles = css`

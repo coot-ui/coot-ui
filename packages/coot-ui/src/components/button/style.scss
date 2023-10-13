@@ -60,7 +60,7 @@ $button-type: primary, secondary, dashed, link, text;
       &.#{$prefix}-button-type-primary,
       &.#{$prefix}-button-type-secondary:not(.#{$prefix}-is-loading):not(
           .#{$prefix}-is-disabled
-        ):hover {
+        ):not(.#{$prefix}-is-circle):not(.#{$prefix}-is-square):hover {
         padding: 0 calc(var(--button-horizon-padding-#{$size}) + 1px);
       }
       @include when(round) {

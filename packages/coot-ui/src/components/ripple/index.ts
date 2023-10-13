@@ -1,9 +1,10 @@
-import { LitElement, html, unsafeCSS, css } from 'lit';
-import { query } from 'lit/decorators.js';
+import { LitElement, html } from 'lit';
+import { state } from 'lit/decorators.js';
 
-import { useNamespace, classString, defineElement } from '@/utils';
+import { useNamespace, defineElement, injectStyle } from '@/utils';
 
-import styles from './style.scss?inline';
+import rippleStyle from '@/style/components/ripple.scss?inline';
+injectStyle(rippleStyle, '@/style/components/ripple.scss');
 
 const rippleEventAttr = 'coot-ripple-event';
 
@@ -11,38 +12,32 @@ const rippleEventAttr = 'coot-ripple-event';
 export class CootButtonGroup extends LitElement {
   ns = useNamespace('ripple');
 
-  @query('#ripple-container')
-  _rippleContainer: HTMLDivElement | undefined;
+  @state()
+  _ripple: HTMLDivElement | undefined;
 
-  protected firstUpdated() {
-    this.rippleInit();
-  }
-
-  rippleInit() {
-    if (!this.parentElement) {
-      return;
-    }
+  rippleInit(holder: HTMLElement) {
     const parentPosition = window
-      .getComputedStyle(this.parentElement)
+      .getComputedStyle(holder)
       .getPropertyValue('position');
     if (parentPosition === 'static') {
-      this.parentElement.style.position = 'relative';
+      holder.style.position = 'relative';
     }
-    this.parentElement.addEventListener(
+    holder.addEventListener(
       'mousedown',
       (event) => {
-        this.startRipple('mousedown', event as MouseEvent);
+        this.startRipple('mousedown', event as MouseEvent, holder);
       },
       { passive: true }
     );
-    this.parentElement.addEventListener(
+    holder.addEventListener(
       'touchstart',
       (event) => {
         const changedTouches = (event as TouchEvent).changedTouches;
         for (let i = 0; i < changedTouches.length; ++i) {
           this.startRipple(
             'touchstart',
-            changedTouches[i] as unknown as MouseEvent
+            changedTouches[i] as unknown as MouseEvent,
+            holder
           );
         }
       },
@@ -50,20 +45,28 @@ export class CootButtonGroup extends LitElement {
     );
   }
 
-  startRipple(eventType: 'mousedown' | 'touchstart', event: MouseEvent) {
-    const rippleContainer = this._rippleContainer as HTMLDivElement;
+  startRipple(
+    eventType: 'mousedown' | 'touchstart',
+    event: MouseEvent,
+    holder: HTMLElement
+  ) {
+    if (!this._ripple) {
+      this._ripple = document.createElement('div') as HTMLDivElement;
+      this._ripple.setAttribute('part', this.ns.b());
+      holder.appendChild(this._ripple);
+    }
 
     // Store the event use to generate this ripple on the holder: don't allow
     // further events of different types until we're done. Prevents double-
     // ripples from mousedown/touchstart.
-    const previousEvent = rippleContainer.getAttribute(rippleEventAttr);
+    const previousEvent = this._ripple.getAttribute(rippleEventAttr);
     if (previousEvent && previousEvent !== eventType) {
       return;
     }
-    rippleContainer.setAttribute(rippleEventAttr, eventType);
+    this._ripple.setAttribute(rippleEventAttr, eventType);
 
     // Create and position the ripple.
-    const rect = rippleContainer.getBoundingClientRect();
+    const rect = this._ripple.getBoundingClientRect();
     const x = event.clientX - rect.left;
     const y = event.clientY - rect.top;
     const leftTopDistance = Math.sqrt(x * x + y * y);
@@ -90,25 +93,45 @@ export class CootButtonGroup extends LitElement {
     ripple.style.height = diameter;
     ripple.style.marginLeft = -radius + x + 'px';
     ripple.style.marginTop = -radius + y + 'px';
-    ripple.className = this.ns.e('content');
+    ripple.setAttribute('part', this.ns.e('content'));
 
-    rippleContainer.appendChild(ripple);
+    this._ripple.appendChild(ripple);
 
     setTimeout(() => {
-      ripple.classList.add(this.ns.m('held'));
+      ripple.setAttribute(
+        'part',
+        `${this.ns.e('content')} ${this.ns.m('held')}`
+      );
     });
 
     const releaseEvent = eventType === 'mousedown' ? 'mouseup' : 'touchend';
     const release = () => {
       document.removeEventListener(releaseEvent, release);
-      ripple.classList.add(this.ns.m('finish'));
+      ripple.setAttribute(
+        'part',
+        `${this.ns.e('content')} ${this.ns.m('held')} ${this.ns.m('finish')}`
+      );
 
       // larger than animation: duration in css
       setTimeout(() => {
-        rippleContainer.removeChild(ripple);
-      }, 500);
+        (this._ripple as HTMLDivElement).removeChild(ripple);
+      }, 600);
     };
     document.addEventListener(releaseEvent, release);
+  }
+
+  handleSlotChange(event: any) {
+    const slot = event.target;
+    const assignedNodes = slot.assignedNodes({ flatten: true });
+
+    if (assignedNodes.length > 1) {
+      console.error('There are more than 1 node under coot ripple.');
+    } else if (assignedNodes.length === 1) {
+      const holder = assignedNodes[0];
+      if (!this._ripple) {
+        this.rippleInit(holder);
+      }
+    }
   }
 
   classes = () => ({
@@ -116,14 +139,6 @@ export class CootButtonGroup extends LitElement {
   });
 
   render() {
-    return html`<div
-      id="ripple-container"
-      class=${classString(this.classes())}
-      part=${this.ns.b()}
-    ></div>`;
+    return html`<slot @slotchange=${this.handleSlotChange}></slot>`;
   }
-
-  static styles = css`
-    ${unsafeCSS(styles)}
-  `;
 }
