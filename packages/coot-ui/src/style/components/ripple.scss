@@ -26,7 +26,7 @@ $ripple: #{$prefix}-ripple;
 }
 
 *::part(#{$ripple}-held) {
-  opacity: 0.3;
+  opacity: 0.4;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
