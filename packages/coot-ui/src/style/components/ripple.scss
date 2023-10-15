@@ -3,6 +3,7 @@
 
 $ripple: #{$prefix}-ripple;
 
+div[part~='#{$ripple}'],
 *::part(#{$ripple}) {
   position: absolute;
   top: 0;
@@ -14,23 +15,21 @@ $ripple: #{$prefix}-ripple;
   pointer-events: none;
 }
 
+div[part~='#{$ripple}_content'],
 *::part(#{$ripple}_content) {
   position: absolute;
   border-radius: 100%;
-  background: currentColor;
-  opacity: 0.15;
-  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
-  transform: scale(0);
+  transition: transform 0.5s linear, opacity 0.5s linear;
   pointer-events: none;
   user-select: none;
 }
 
-*::part(#{$ripple}-held) {
-  opacity: 0.4;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-*::part(#{$ripple}-finish) {
-  opacity: 0;
-}
+// div[part~='#{$ripple}-held'],
+// *::part(#{$ripple}-held) {
+//   transform: scale(1);
+// }
+//
+// div[part~='#{$ripple}-finish'],
+// *::part(#{$ripple}-finish) {
+//   opacity: 0;
+// }

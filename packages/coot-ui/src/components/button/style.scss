@@ -43,11 +43,6 @@ $button-type: primary, secondary, dashed, link, text;
   color: var(--button-text-color);
   cursor: pointer;
   font-family: var(--button-font-family);
-  overflow: hidden;
-
-  @include when(long) {
-    width: 100%;
-  }
 
   @each $size in $component-size {
     @include m(size-#{$size}) {
@@ -158,6 +153,11 @@ $button-type: primary, secondary, dashed, link, text;
         &:hover {
           background-color: var(--button-#{$status}-bg);
         }
+        @include when(disabled) {
+          &:hover {
+            background-color: transparent;
+          }
+        }
       }
 
       &.#{$prefix}-button-type-primary {
@@ -199,5 +199,9 @@ $button-type: primary, secondary, dashed, link, text;
         }
       }
     }
+  }
+
+  @include when(long) {
+    width: 100%;
   }
 }

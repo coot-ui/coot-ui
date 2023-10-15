@@ -81,8 +81,8 @@
 
   // primary
   --#{$prefix}-primary: var(--#{$prefix}-blue-6);
-  --#{$prefix}-primary-hover: var(--#{$prefix}-blue-5);
-  --#{$prefix}-primary-active: var(--#{$prefix}-blue-7);
+  --#{$prefix}-primary-hover: var(--#{$prefix}-blue-7);
+  --#{$prefix}-primary-active: var(--#{$prefix}-blue-5);
   --#{$prefix}-primary-disable: var(--#{$prefix}-blue-3);
   --#{$prefix}-primary-lighter: var(--#{$prefix}-blue-1);
   --#{$prefix}-primary-light: var(--#{$prefix}-blue-2);
@@ -90,24 +90,24 @@
 
   // success
   --#{$prefix}-success: var(--#{$prefix}-green-6);
-  --#{$prefix}-success-hover: var(--#{$prefix}-green-5);
-  --#{$prefix}-success-active: var(--#{$prefix}-green-7);
+  --#{$prefix}-success-hover: var(--#{$prefix}-green-7);
+  --#{$prefix}-success-active: var(--#{$prefix}-green-5);
   --#{$prefix}-success-disable: var(--#{$prefix}-green-3);
   --#{$prefix}-success-lighter: var(--#{$prefix}-green-1);
   --#{$prefix}-success-light: var(--#{$prefix}-green-2);
   --#{$prefix}-success-bg: var(--#{$prefix}-green-0);
   // error
   --#{$prefix}-error: var(--#{$prefix}-red-6);
-  --#{$prefix}-error-hover: var(--#{$prefix}-red-5);
-  --#{$prefix}-error-active: var(--#{$prefix}-red-7);
+  --#{$prefix}-error-hover: var(--#{$prefix}-red-7);
+  --#{$prefix}-error-active: var(--#{$prefix}-red-5);
   --#{$prefix}-error-disable: var(--#{$prefix}-red-3);
   --#{$prefix}-error-lighter: var(--#{$prefix}-red-1);
   --#{$prefix}-error-light: var(--#{$prefix}-red-2);
   --#{$prefix}-error-bg: var(--#{$prefix}-red-0);
   // warning
   --#{$prefix}-warning: var(--#{$prefix}-orange-6);
-  --#{$prefix}-warning-hover: var(--#{$prefix}-orange-5);
-  --#{$prefix}-warning-active: var(--#{$prefix}-orange-7);
+  --#{$prefix}-warning-hover: var(--#{$prefix}-orange-7);
+  --#{$prefix}-warning-active: var(--#{$prefix}-orange-5);
   --#{$prefix}-warning-disable: var(--#{$prefix}-orange-3);
   --#{$prefix}-warning-lighter: var(--#{$prefix}-orange-1);
   --#{$prefix}-warning-light: var(--#{$prefix}-orange-2);
