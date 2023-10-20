@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress';
-import { markdownDemo } from 'vitepress-demo-box';
+// import { markdownDemo } from 'vitepress-demo-box';
+import { markdownDemo } from '../../../../vitepress-demo-box';
 import path from 'path';
 
 // https://vitepress.dev/reference/site-config

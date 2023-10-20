@@ -6,45 +6,45 @@
 
 通过 `type` 属性设置不同种类的按钮。
 
-<demo path="button/type.vue"></demo>
+<demo vue="button/type/index.vue" vanilla="button/type/index.html"></demo>
 
 ### 带图标按钮
 
 通过在按钮中添加 `coot-icon-xxx` 获得带图标的按钮。
 
-<demo path="button/icon.vue"></demo>
+<demo vue="button/icon/index.vue" vanilla="button/icon/index.html"></demo>
 
 ### 按钮状态
 
 通过 `status` 属性设置按钮不同状态。
 
-<demo path="button/status.vue"></demo>
+<demo vue="button/status/index.vue" vanilla="button/status/index.html"></demo>
 
 ### 按钮尺寸
 
 通过 `size` 属性设置按钮不同状态。
 
-<demo path="button/size.vue"></demo>
+<demo vue="button/size/index.vue" vanilla="button/size/index.html"></demo>
 
 ### 禁用按钮
 
 通过 `disabled` 设置按钮为禁用状态。
-<demo path="button/disable.vue"></demo>
+<demo vue="button/disable/index.vue" vanilla="button/disable/index.html"></demo>
 
 ### 加载中按钮
 
 通过 `loading` 设置按钮为加载中状态。
-<demo path="button/loading.vue"></demo>
+<demo vue="button/loading/index.vue" vanilla="button/loading/index.html"></demo>
 
 ### 长按钮
 
 通过 `long` 设置按钮为父容器宽度 `100%`。
-<demo path="button/long.vue"></demo>
+<demo vue="button/long/index.vue" vanilla="button/long/index.html"></demo>
 
 ### 按钮组
 
 使用 `button-group` 包裹按钮，可以获得按钮组。
-<demo path="button/group.vue"></demo>
+<demo vue="button/group/index.vue" vanilla="button/group/index.html"></demo>
 
 ## API
 

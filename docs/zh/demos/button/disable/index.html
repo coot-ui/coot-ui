@@ -1,0 +1,26 @@
+<div>
+  <div class="button-display-container">
+    <coot-button disabled>Default</coot-button>
+    <coot-button disabled type="primary">Primary</coot-button>
+    <coot-button disabled type="secondary">Secondary</coot-button>
+    <coot-button disabled type="dashed">Dashed</coot-button>
+    <coot-button disabled type="text">Text</coot-button>
+    <coot-button disabled type="link">Link</coot-button>
+  </div>
+</div>
+
+<style>
+  .button-display-container {
+    display: flex;
+    gap: 12px 16px;
+    margin-bottom: 16px;
+    margin-top: 4px;
+    flex-wrap: wrap;
+  }
+  .button-display-container:first-of-type {
+    margin-top: 0;
+  }
+  .button-display-container:last-of-type {
+    margin-bottom: 0;
+  }
+</style>

@@ -14,25 +14,25 @@ import '@coot-ui/icons';
 
 然后通过 `<coot-icon-xxx></coot-icon-xxx>` 的方式使用图标。
 
-<demo path="icons/all.vue"></demo>
+<demo vue="icons/all.vue"></demo>
 
 ### 按需引入
 
 如果你不想全量引入，通过 `import '@coot-ui/icons/xxx';` 按需引入图标。
 
-<demo path="icons/import.vue"></demo>
+<demo vue="icons/import.vue"></demo>
 
 ### 颜色尺寸
 
 可以通过常规 `style` 样式中的 `font-size` 和 `color` 设置图标的大小和颜色。
 
-<demo path="icons/base.vue"></demo>
+<demo vue="icons/base.vue"></demo>
 
 ### 旋转图标
 
 通过设置 `spin` 属性让图标旋转。
 
-<demo path="icons/spin.vue"></demo>
+<demo vue="icons/spin.vue"></demo>
 
 ### 图标大全
 

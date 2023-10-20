@@ -48,6 +48,21 @@ export class CootButton extends LitElement {
 
   ns = useNamespace('button');
 
+  updated(changedProperties: Map<string, any>) {
+    super.updated(changedProperties);
+    if (changedProperties.has('long')) {
+      this.handlePropertyLong();
+    }
+  }
+
+  handlePropertyLong() {
+    if (this.long) {
+      this.style.width = '100%';
+    } else {
+      this.style.width = 'auto';
+    }
+  }
+
   classes = () => ({
     [this.ns.b()]: true,
     [this.ns.m(`type-${this.type}`)]: true,

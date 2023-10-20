@@ -19,17 +19,12 @@
   </div>
 </template>
 
-<script setup lang="ts">
-import '@coot-ui/icons/edit-3';
-</script>
-
 <style scoped lang="less">
 .button-display-container {
   display: flex;
   gap: 12px 16px;
   margin-bottom: 16px;
   margin-top: 4px;
-  flex-wrap: wrap;
   flex-wrap: wrap;
   &:first-of-type {
     margin-top: 0;

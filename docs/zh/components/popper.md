@@ -6,4 +6,4 @@
 
 通过 `type` 属性设置不同种类的按钮。
 
-<demo path="popper/base.vue"></demo>
+<demo vue="popper/base.vue"></demo>
