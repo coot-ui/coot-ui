@@ -2,7 +2,7 @@ import type { Plugin, App } from 'vue';
 
 const INSTALLED_KEY = Symbol('coot_ui_installed');
 
-interface CootVueApp extends App {
+export interface CootVueApp extends App {
   [INSTALLED_KEY]: boolean;
 }
 

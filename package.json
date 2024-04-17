@@ -38,7 +38,7 @@
     "prepare": "npx husky install",
     "wrapper": "coot-cli wrapper",
     "commit": "git add . && git-cz",
-    "dev": "cd ./scripts && node ./dev"
+    "dev": "cd ./docs/zh && pnpm docs:dev"
   },
   "config": {
     "commitizen": {

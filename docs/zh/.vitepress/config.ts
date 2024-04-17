@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
-// import { markdownDemo } from 'vitepress-demo-box';
-import { markdownDemo } from '../../../../vitepress-demo-box';
+import { markdownDemo } from 'vitepress-demo-box';
 import path from 'path';
 
 // https://vitepress.dev/reference/site-config
@@ -51,5 +50,18 @@ export default defineConfig({
       });
     },
   },
-  vite: {},
+  vite: {
+   resolve: {
+    alias: [
+      {
+        find: '@',
+        replacement: path.resolve(__dirname, '../../../packages/coot-ui/src'),
+      },
+      {
+          find: '~@',
+          replacement: path.resolve(__dirname, '../../../packages/coot-ui/src'),
+      },
+    ]
+   }
+  },
 });

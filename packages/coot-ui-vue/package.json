@@ -4,34 +4,61 @@
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "typings": "./dist/index.d.ts",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.mjs"
+        },
+        "require": {
+          "types": "./dist/index.d.ts",
+          "default": "./dist/index.js"
+        }
+      },
+      "./dist/*": {
+        "import": {
+          "default": "./dist/*"
+        },
+        "require": {
+          "default": "./dist/*"
+        }
+      },
+      "./*": {
+        "import": {
+          "default": "./dist/components/*/index.mjs"
+        },
+        "require": {
+          "default": "./dist/components/*/index.js"
+        }
+      }
+    }
+  },
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.mjs"
+        "types": "./src/index.ts",
+        "default": "./src/index.ts"
       },
       "require": {
-        "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "types": "./src/index.ts",
+        "default": "./src/index.ts"
       }
-    },
-    "./dist/style.css": {
-      "default": "./dist/style.css"
     },
     "./dist/*": {
       "import": {
-        "default": "./dist/*"
+        "default": "./src/*"
       },
       "require": {
-        "default": "./dist/*"
+        "default": "./src/*"
       }
     },
     "./*": {
       "import": {
-        "default": "./dist/components/*/index.mjs"
+        "default": "./src/components/*/index.ts"
       },
       "require": {
-        "default": "./dist/components/*/index.js"
+        "default": "./src/components/*/index.ts"
       }
     }
   },

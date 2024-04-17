@@ -4,10 +4,8 @@ import Theme from 'vitepress/theme';
 import IconList from '../components/icon-list.vue';
 import CodeLanguage from '../components/code-language.vue';
 import './style.scss';
-// import { VitepressDemoBox } from 'vitepress-demo-box';
-// import 'vitepress-demo-box/dist/style.css';
-import { VitepressDemoBox } from '../../../../../vitepress-demo-box';
-import '../../../../../vitepress-demo-box/dist/style.css';
+import { VitepressDemoBox } from 'vitepress-demo-box';
+import 'vitepress-demo-box/dist/style.css';
 import CootUI from '@coot-ui/vue';
 
 export default {

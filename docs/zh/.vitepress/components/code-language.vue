@@ -1,6 +1,6 @@
 <template>
   <div class="code-language-switch text">
-    <div class="code-language-label">html</div>
+    <div class="code-language-label">{{ codeType }}</div>
     <svg
       data-v-9983eb53=""
       xmlns="http://www.w3.org/2000/svg"
