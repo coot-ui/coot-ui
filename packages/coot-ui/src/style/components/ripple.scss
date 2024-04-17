@@ -5,11 +5,6 @@ $ripple: #{$prefix}-ripple;
 
 div[part~='#{$ripple}'],
 *::part(#{$ripple}) {
-  position: relative;
-}
-
-div[part~='#{$ripple}_container'],
-*::part(#{$ripple}_container) {
   position: absolute;
   top: 0;
   left: 0;

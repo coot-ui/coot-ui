@@ -1,15 +1,15 @@
 import { LitElement, html, unsafeCSS, css } from 'lit';
 import { property } from 'lit/decorators.js';
+import { query } from 'lit/decorators/query.js';
 import { unsafeHTML } from 'lit/directives/unsafe-html.js';
 
 import '@coot-ui/icons/spin';
 
-import { useNamespace, classString, defineElement } from '@/utils';
+import { useNamespace, classString, defineElement, CootRipple } from '@/utils';
 
 import styles from './style.scss?inline';
 
 import { ButtonType, ButtonStatus, ButtonSize } from './type';
-import '../ripple';
 
 @defineElement('coot-button')
 export class CootButton extends LitElement {
@@ -46,7 +46,15 @@ export class CootButton extends LitElement {
   @property({ type: String })
   icon = '';
 
+  @query('#ripple-effect-dom')
+  buttomDOM: HTMLButtonElement | undefined;
+
   ns = useNamespace('button');
+  ripple = new CootRipple();
+
+  firstUpdated(): void {
+    this.ripple.init(this.buttomDOM as HTMLButtonElement);
+  }
 
   updated(changedProperties: Map<string, any>) {
     super.updated(changedProperties);
@@ -95,6 +103,18 @@ export class CootButton extends LitElement {
     }
   }
 
+  renderButtonWithRipple() {
+    return html`<button
+      id="ripple-effect-dom"
+      class=${classString(this.classes())}
+      part=${classString(this.classes())}
+      @click="${this.validateClickable}"
+    >
+      ${this.renderIcon()}
+      <slot></slot>
+    </button>`;
+  }
+
   renderButton() {
     return html`<button
       class=${classString(this.classes())}
@@ -110,7 +130,7 @@ export class CootButton extends LitElement {
     if (this.type === 'link' || this.loading || this.disabled) {
       return this.renderButton();
     }
-    return html`<coot-ripple>${this.renderButton()}</coot-ripple>`;
+    return html`${this.renderButtonWithRipple()}`;
   }
 
   static styles = css`
