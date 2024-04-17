@@ -89,10 +89,17 @@ export class CootButton extends LitElement {
     }
   }
 
+  validateClickable(e: Event) {
+    if (this.loading || this.disabled) {
+      e.stopPropagation();
+    }
+  }
+
   renderButton() {
     return html`<button
       class=${classString(this.classes())}
       part=${classString(this.classes())}
+      @click="${this.validateClickable}"
     >
       ${this.renderIcon()}
       <slot></slot>
@@ -103,9 +110,7 @@ export class CootButton extends LitElement {
     if (this.type === 'link' || this.loading || this.disabled) {
       return this.renderButton();
     }
-    return html`<coot-ripple style="width: 100%;"
-      >${this.renderButton()}</coot-ripple
-    >`;
+    return html`<coot-ripple>${this.renderButton()}</coot-ripple>`;
   }
 
   static styles = css`

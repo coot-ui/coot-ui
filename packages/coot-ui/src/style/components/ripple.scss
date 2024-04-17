@@ -5,6 +5,11 @@ $ripple: #{$prefix}-ripple;
 
 div[part~='#{$ripple}'],
 *::part(#{$ripple}) {
+  position: relative;
+}
+
+div[part~='#{$ripple}_container'],
+*::part(#{$ripple}_container) {
   position: absolute;
   top: 0;
   left: 0;
@@ -23,13 +28,3 @@ div[part~='#{$ripple}_content'],
   pointer-events: none;
   user-select: none;
 }
-
-// div[part~='#{$ripple}-held'],
-// *::part(#{$ripple}-held) {
-//   transform: scale(1);
-// }
-//
-// div[part~='#{$ripple}-finish'],
-// *::part(#{$ripple}-finish) {
-//   opacity: 0;
-// }

@@ -24,27 +24,25 @@ export class CootRipple extends LitElement {
   @state()
   _rippleContainer: HTMLDivElement | undefined;
 
-  initRippleToTarget(target: HTMLElement) {
-    this.checkTargetPosition(target);
-    this.appendRippleContainerToTarget(target);
-    this.addListenerToTarget(target);
-  }
-
-  // check that the position of target cann't be static
-  checkTargetPosition(target: HTMLElement) {
-    const position = window
-      .getComputedStyle(target)
-      .getPropertyValue('position');
-    if (position === 'static') {
-      target.style.position = 'relative';
+  connectedCallback(): void {
+    if (this.children.length !== 1) {
+      if (this.children.length === 0) {
+        return;
+      } else {
+        console.error('There are more than 1 node under coot ripple.');
+        return;
+      }
     }
+    this.setAttribute('part', this.ns.b());
+    this.appendRippleContainerToTarget(this.children[0] as HTMLElement);
+    this.addListenerToTarget(this.children[0] as HTMLElement);
   }
 
   // init rippleContainer and append it to target
   appendRippleContainerToTarget(target: HTMLElement) {
     if (!this._rippleContainer) {
       this._rippleContainer = document.createElement('div') as HTMLDivElement;
-      this._rippleContainer.setAttribute('part', this.ns.b());
+      this._rippleContainer.setAttribute('part', this.ns.e('container'));
       target.appendChild(this._rippleContainer);
     }
   }
@@ -138,24 +136,15 @@ export class CootRipple extends LitElement {
     document.addEventListener(releaseEvent, release);
   }
 
-  handleSlotChange(event: any) {
-    const slot = event.target;
-    const assignedNodes = slot.assignedNodes({ flatten: true });
-    if (assignedNodes.length > 1) {
-      console.error('There are more than 1 node under coot ripple.');
-    } else if (assignedNodes.length === 1) {
-      const holder = assignedNodes[0];
-      if (!this._rippleContainer) {
-        this.initRippleToTarget(holder);
-      }
-    }
-  }
-
   classes = () => ({
     [this.ns.b()]: true,
   });
 
   render() {
-    return html`<slot @slotchange=${this.handleSlotChange}></slot>`;
+    return html``;
+  }
+
+  createRenderRoot() {
+    return this;
   }
 }
