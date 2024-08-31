@@ -14,6 +14,7 @@ $button-type: primary, secondary, dashed, link, text;
     --button-#{$status}-active: var(--#{$prefix}-#{$status}-active);
     --button-#{$status}-disable: var(--#{$prefix}-#{$status}-disable);
     --button-#{$status}-bg: var(--#{$prefix}-#{$status}-lighter);
+    --button-#{$status}-ripple: var(--#{$prefix}-#{$status}-ripple);
   }
 
   @each $size in $component-size {
@@ -80,6 +81,16 @@ $button-type: primary, secondary, dashed, link, text;
         padding: 0 calc(var(--button-horizon-padding-#{$size}) - 0.5em - 2px);
         &:hover {
           padding: 0 calc(var(--button-horizon-padding-#{$size}) - 0.5em - 2px);
+        }
+      }
+
+      &.#{$prefix}-button-type-primary {
+        @include when(loading-fixed) {
+          padding: 0 calc(var(--button-horizon-padding-#{$size}) - 0.5em - 1px);
+          &:hover {
+            padding: 0
+              calc(var(--button-horizon-padding-#{$size}) - 0.5em - 1px);
+          }
         }
       }
     }
@@ -165,7 +176,7 @@ $button-type: primary, secondary, dashed, link, text;
         background-color: var(--button-#{$status});
         &:hover {
           color: white;
-          background-color: var(--button-#{$status}-active);
+          background-color: var(--button-#{$status}-ripple);
         }
         @include when(disabled) {
           &,

@@ -8,6 +8,28 @@ import { VitepressDemoBox } from 'vitepress-demo-box';
 import 'vitepress-demo-box/dist/style.css';
 import CootUI from '@coot-ui/vue';
 
+function watchThemeChange() {
+  const targetNode = document.documentElement;
+
+  const observer = new MutationObserver((mutationsList) => {
+    for (const mutation of mutationsList) {
+      if (
+        mutation.type === 'attributes' &&
+        mutation.attributeName === 'class'
+      ) {
+        if (targetNode.classList.contains('dark')) {
+          targetNode.setAttribute('coot-theme', 'dark');
+        } else {
+          targetNode.setAttribute('coot-theme', 'light');
+        }
+      }
+    }
+  });
+
+  const config = { attributes: true };
+  observer.observe(targetNode, config);
+}
+
 export default {
   ...Theme,
   Layout: () => {
@@ -31,5 +53,7 @@ export default {
     app.component('icon-list', IconList);
     app.component('demo-box', VitepressDemoBox);
     app.use(CootUI);
+
+    watchThemeChange();
   },
 };
