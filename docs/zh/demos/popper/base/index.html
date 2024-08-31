@@ -1,0 +1,91 @@
+<div>
+  <div class="flex-center">
+    <coot-popper placement="top-start">
+      <coot-button>Top Start</coot-button>
+      <div slot="content">Top Start Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="top">
+      <coot-button>Top</coot-button>
+      <div slot="content">Top Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="top-end">
+      <coot-button>Top End</coot-button>
+      <div slot="content">Top End Popper</div>
+    </coot-popper>
+  </div>
+
+  <div class="flex-between">
+    <coot-popper placement="left-start">
+      <coot-button>Left Start</coot-button>
+      <div slot="content">Left Start Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="right-end">
+      <coot-button>Right End</coot-button>
+      <div slot="content">Right End Popper</div>
+    </coot-popper>
+  </div>
+
+  <div class="flex-between">
+    <coot-popper placement="left">
+      <coot-button>Left</coot-button>
+      <div slot="content">Left Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="right">
+      <coot-button>Right</coot-button>
+      <div slot="content">Right Popper</div>
+    </coot-popper>
+  </div>
+
+  <div class="flex-between">
+    <coot-popper placement="left-end">
+      <coot-button>Left End</coot-button>
+      <div slot="content">Left End Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="right-end">
+      <coot-button>Right End</coot-button>
+      <div slot="content">Right End Popper</div>
+    </coot-popper>
+  </div>
+
+  <div class="flex-center">
+    <coot-popper placement="bottom-start">
+      <coot-button>Bottom Start</coot-button>
+      <div slot="content">Bottom Start Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="bottom">
+      <coot-button>Bottom</coot-button>
+      <div slot="content">Bottom Popper</div>
+    </coot-popper>
+
+    <coot-popper placement="bottom-end">
+      <coot-button>Bottom End</coot-button>
+      <div slot="content">Bottom End Popper</div>
+    </coot-popper>
+  </div>
+</div>
+
+<style>
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 16px;
+  }
+
+  .flex-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  coot-button::part(coot-button) {
+    width: 114px;
+  }
+</style>

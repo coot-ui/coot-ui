@@ -1,10 +1,35 @@
 @use '~@/style/mixin.scss' as *;
+@use '~@/style/config.scss' as *;
+
+// $button-status: primary, success, error, warning;
+// $button-type: primary, secondary, dashed, link, text;
+//
+// :host {
+//   display: inline-flex;
+//   align-items: center;
+//
+//   @each $status in $button-status {
+//     --button-#{$status}: var(--#{$prefix}-#{$status});
+//     --button-#{$status}-hover: var(--#{$prefix}-#{$status}-hover);
+//     --button-#{$status}-active: var(--#{$prefix}-#{$status}-active);
+//     --button-#{$status}-disable: var(--#{$prefix}-#{$status}-disable);
+//     --button-#{$status}-bg: var(--#{$prefix}-#{$status}-lighter);
+//   }
 
 @include b(popper) {
-  position: relative;
+  --popper-bg: var(--#{$prefix}-tooltip-bg);
+  --popper-color: var(--#{$prefix}-tooltip-color);
 
-  @include m(content) {
+  background: var(--popper-bg);
+  color: var(--popper-color);
+  padding: var(--#{$prefix}-gap-1) var(--#{$prefix}-gap-2);
+  border-radius: var(--#{$prefix}-radius);
+
+  @include e(arrow) {
+    background: var(--popper-bg);
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.5);
+    width: var(--#{$prefix}-gap-2);
+    height: var(--#{$prefix}-gap-2);
+    transform: rotate(45deg);
   }
 }

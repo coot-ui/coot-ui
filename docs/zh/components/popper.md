@@ -2,8 +2,8 @@
 
 ## Example
 
-### 基础使用
+### 不同位置
 
-通过 `type` 属性设置不同种类的按钮。
+共有 12 种不同位置触发。
 
-<demo vue="popper/base.vue"></demo>
+<demo vue="popper/base/index.vue" vanilla="popper/base/index.html"></demo>
