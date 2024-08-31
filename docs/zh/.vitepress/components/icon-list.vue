@@ -20,20 +20,20 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import '../../../../packages/coot-icon/dist/index.mjs';
+import '@coot-ui/icons';
 
 const list = ref<string[]>([]);
 
 onMounted(() => {
   // @ts-ignore
   const files = import.meta.globEager(
-    '../../../../packages/coot-icon/dist/*.mjs'
+    '../../../../packages/coot-icon/src/icons/*.ts'
   );
 
   const names = Object.keys(files)
     .map((file) => {
       const segs = file.split('/');
-      const name = segs[segs.length - 1].replace('.mjs', '');
+      const name = segs[segs.length - 1].replace('.ts', '');
       return name;
     })
     .filter((item) => !item.startsWith('style.'));
