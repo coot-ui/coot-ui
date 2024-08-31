@@ -19,7 +19,9 @@
   </div>
   <div>点击加载时固定宽度</div>
   <div class="button-display-container">
-    <coot-button id="coot-demos-button-loading-click-fixed" loadingFixed type="primary"@click="handleClickDefaultFixed()">Default</coot-button>
+    <coot-button id="coot-demos-button-loading-click-fixed" loadingFixed @click="handleClickDefaultFixed()">Default</coot-button>
+    <coot-button id="coot-demos-button-loading-click-fixed-primary" loadingFixed type="primary"@click="handleClickPrimaryFixed()">Primary</coot-button>
+    <coot-button id="coot-demos-button-loading-click-fixed-secondary" loadingFixed type="secondary"@click="handleClickSecondaryFixed()">Secondary</coot-button>
   </div>
   </d>
 
@@ -35,6 +37,8 @@
       'coot-demos-button-loading-click-icon-primary',
       'coot-demos-button-loading-click-icon-secondary',
       'coot-demos-button-loading-click-fixed',
+      'coot-demos-button-loading-click-fixed-primary',
+      'coot-demos-button-loading-click-fixed-secondary',
     ].forEach(id => {
       document.querySelector(`#${id}`).addEventListener('click', e => {
         e.target.loading = true;

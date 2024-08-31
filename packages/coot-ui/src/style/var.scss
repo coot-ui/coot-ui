@@ -59,7 +59,7 @@
   --#{$prefix}-gray-9: #262626;
   --#{$prefix}-gray-10: #1f1f1f;
 
-  --#{$prefix}-tooltip-bg: rgba(0, 0, 0, 0.88);
+  --#{$prefix}-tooltip-bg: var(--#{$prefix}-gray-10);
   --#{$prefix}-tooltip-color: var(--#{$prefix}-gray-1);
   --#{$prefix}-color-text-main: rgba(0, 0, 0, 0.85);
   --#{$prefix}-color-text-secondary: rgba(0, 0, 0, 0.65);
@@ -80,6 +80,7 @@
   --#{$prefix}-primary-lighter: var(--#{$prefix}-blue-1);
   --#{$prefix}-primary-light: var(--#{$prefix}-blue-2);
   --#{$prefix}-primary-bg: var(--#{$prefix}-blue-0);
+  --#{$prefix}-primary-ripple: var(--#{$prefix}-blue-7);
 
   // success
   --#{$prefix}-success: var(--#{$prefix}-green-6);
@@ -89,6 +90,7 @@
   --#{$prefix}-success-lighter: var(--#{$prefix}-green-1);
   --#{$prefix}-success-light: var(--#{$prefix}-green-2);
   --#{$prefix}-success-bg: var(--#{$prefix}-green-0);
+  --#{$prefix}-success-ripple: var(--#{$prefix}-green-7);
   // error
   --#{$prefix}-error: var(--#{$prefix}-red-6);
   --#{$prefix}-error-hover: var(--#{$prefix}-red-5);
@@ -97,6 +99,7 @@
   --#{$prefix}-error-lighter: var(--#{$prefix}-red-1);
   --#{$prefix}-error-light: var(--#{$prefix}-red-2);
   --#{$prefix}-error-bg: var(--#{$prefix}-red-0);
+  --#{$prefix}-error-ripple: var(--#{$prefix}-red-7);
   // warning
   --#{$prefix}-warning: var(--#{$prefix}-orange-6);
   --#{$prefix}-warning-hover: var(--#{$prefix}-orange-5);
@@ -105,6 +108,7 @@
   --#{$prefix}-warning-lighter: var(--#{$prefix}-orange-1);
   --#{$prefix}-warning-light: var(--#{$prefix}-orange-2);
   --#{$prefix}-warning-bg: var(--#{$prefix}-orange-0);
+  --#{$prefix}-warning-ripple: var(--#{$prefix}-orange-7);
 
   // height
   --#{$prefix}-height-default: 32px;
@@ -179,7 +183,7 @@
   --#{$prefix}-orange-9: #ffe3b8;
   --#{$prefix}-orange-10: #fff7e8;
 
-  --#{$prefix}-tooltip-bg: rgba(255, 255, 255, 0.88);
+  --#{$prefix}-tooltip-bg: var(--#{$prefix}-gray-1);
   --#{$prefix}-tooltip-color: var(--#{$prefix}-gray-10);
   --#{$prefix}-color-text-main: rgba(255, 255, 255, 0.85);
   --#{$prefix}-color-text-secondary: rgba(255, 255, 255, 0.65);
@@ -191,4 +195,9 @@
   --#{$prefix}-color-table-header: rgba(255, 255, 255, 0.04);
   --#{$prefix}-color-lighter: var(--#{$prefix}-gray-9);
   --#{$prefix}-color-light: var(--#{$prefix}-gray-8);
+
+  --#{$prefix}-primary-ripple: var(--#{$prefix}-blue-5);
+  --#{$prefix}-success-ripple: var(--#{$prefix}-green-5);
+  --#{$prefix}-error-ripple: var(--#{$prefix}-red-5);
+  --#{$prefix}-warning-ripple: var(--#{$prefix}-orange-5);
 }

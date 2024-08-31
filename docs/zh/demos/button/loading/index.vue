@@ -51,9 +51,22 @@
     <c-button
       :loading="defaultFixedLoading"
       loadingFixed
-      type="primary"
       @click="handleClickDefaultFixed()"
       >Default</c-button
+    >
+    <c-button
+      :loading="primaryFixedLoading"
+      loadingFixed
+      type="primary"
+      @click="handleClickPrimaryFixed()"
+      >Primary</c-button
+    >
+    <c-button
+      :loading="secondaryFixedLoading"
+      loadingFixed
+      type="secondary"
+      @click="handleClickSecondaryFixed()"
+      >Secondary</c-button
     >
   </div>
 </template>
@@ -115,6 +128,22 @@ const handleClickDefaultFixed = () => {
   defaultFixedLoading.value = true;
   setTimeout(() => {
     defaultFixedLoading.value = false;
+  }, 3000);
+};
+
+const primaryFixedLoading = ref(false);
+const handleClickPrimaryFixed = () => {
+  primaryFixedLoading.value = true;
+  setTimeout(() => {
+    primaryFixedLoading.value = false;
+  }, 3000);
+};
+
+const secondaryFixedLoading = ref(false);
+const handleClickSecondaryFixed = () => {
+  secondaryFixedLoading.value = true;
+  setTimeout(() => {
+    secondaryFixedLoading.value = false;
   }, 3000);
 };
 </script>
