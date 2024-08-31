@@ -3,18 +3,33 @@
   "version": "0.0.1",
   "main": "dist/index.mjs",
   "module": "dist/index.umd.js",
+  "publishConfig": {
+    "exports": {
+      ".": {
+        "import": {
+          "types": "./types/index.d.ts",
+          "default": "./dist/index.mjs"
+        },
+        "require": {
+          "types": "./types/index.d.ts",
+          "default": "./dist/index.umd.js"
+        }
+      },
+      "./*": "./dist/*.mjs"
+    }
+  },
   "exports": {
     ".": {
       "import": {
-        "types": "./types/index.d.ts",
-        "default": "./dist/index.mjs"
+        "types": "./src/index.ts",
+        "default": "./src/index.ts"
       },
       "require": {
-        "types": "./types/index.d.ts",
-        "default": "./dist/index.umd.js"
+        "types": "./src/index.ts",
+        "default": "./src/index.ts"
       }
     },
-    "./*": "./dist/*.mjs"
+    "./*": "./src/icons/*.ts"
   },
   "types": "types/index.d.ts",
   "files": [
