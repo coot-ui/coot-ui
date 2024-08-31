@@ -72,17 +72,6 @@
   --#{$prefix}-color-lighter: var(--#{$prefix}-gray-2);
   --#{$prefix}-color-light: var(--#{$prefix}-gray-3);
 
-  --#{$prefix}-dark-tooltip-bg: rgba(255, 255, 255, 0.88);
-  --#{$prefix}-dark-tooltip-color: var(--#{$prefix}-gray-10);
-  --#{$prefix}-dark-color-main: rgba(255, 255, 255, 0.85);
-  --#{$prefix}-dark-color-text-secondary: rgba(255, 255, 255, 0.65);
-  --#{$prefix}-dark-color-text-tertiary: rgba(255, 255, 255, 0.45);
-  --#{$prefix}-dark-color-text-disable: rgba(255, 255, 255, 0.3);
-  --#{$prefix}-dark-color-border: rgba(255, 255, 255, 0.2);
-  --#{$prefix}-dark-color-divider: rgba(255, 255, 255, 0.12);
-  --#{$prefix}-dark-color-bg: rgba(255, 255, 255, 0.08);
-  --#{$prefix}-dark-color-table-header: rgba(255, 255, 255, 0.04);
-
   // primary
   --#{$prefix}-primary: var(--#{$prefix}-blue-6);
   --#{$prefix}-primary-hover: var(--#{$prefix}-blue-5);
@@ -142,4 +131,64 @@
 
   // radius
   --#{$prefix}-radius: 4px;
+}
+
+:root[#{$prefix}-theme='dark'] {
+  // color
+  --#{$prefix}-green-1: #004d1c;
+  --#{$prefix}-green-2: #046625;
+  --#{$prefix}-green-3: #0a802d;
+  --#{$prefix}-green-4: #129a37;
+  --#{$prefix}-green-5: #1db440;
+  --#{$prefix}-green-6: #27c346;
+  --#{$prefix}-green-7: #50d266;
+  --#{$prefix}-green-8: #7ee18b;
+  --#{$prefix}-green-9: #b2f0b7;
+  --#{$prefix}-green-10: #ebffec;
+
+  --#{$prefix}-blue-1: #00164d;
+  --#{$prefix}-blue-2: #042979;
+  --#{$prefix}-blue-3: #0e44a6;
+  --#{$prefix}-blue-4: #1d62d2;
+  --#{$prefix}-blue-5: #3086ff;
+  --#{$prefix}-blue-6: #3c94ff;
+  --#{$prefix}-blue-7: #68b1ff;
+  --#{$prefix}-blue-8: #93caff;
+  --#{$prefix}-blue-9: #bee2ff;
+  --#{$prefix}-blue-10: #eaf6ff;
+
+  --#{$prefix}-red-1: #4d000a;
+  --#{$prefix}-red-2: #770611;
+  --#{$prefix}-red-3: #a1161f;
+  --#{$prefix}-red-4: #cb2e34;
+  --#{$prefix}-red-5: #f54e4e;
+  --#{$prefix}-red-6: #f76965;
+  --#{$prefix}-red-7: #f98d86;
+  --#{$prefix}-red-8: #fbb0a7;
+  --#{$prefix}-red-9: #fdd1ca;
+  --#{$prefix}-red-10: #fff0ec;
+
+  --#{$prefix}-orange-1: #4d1b00;
+  --#{$prefix}-orange-2: #793004;
+  --#{$prefix}-orange-3: #a64b0a;
+  --#{$prefix}-orange-4: #d26913;
+  --#{$prefix}-orange-5: #ff8d1f;
+  --#{$prefix}-orange-6: #ff9626;
+  --#{$prefix}-orange-7: #ffb357;
+  --#{$prefix}-orange-8: #ffcd87;
+  --#{$prefix}-orange-9: #ffe3b8;
+  --#{$prefix}-orange-10: #fff7e8;
+
+  --#{$prefix}-tooltip-bg: rgba(255, 255, 255, 0.88);
+  --#{$prefix}-tooltip-color: var(--#{$prefix}-gray-10);
+  --#{$prefix}-color-text-main: rgba(255, 255, 255, 0.85);
+  --#{$prefix}-color-text-secondary: rgba(255, 255, 255, 0.65);
+  --#{$prefix}-color-text-tertiary: rgba(255, 255, 255, 0.45);
+  --#{$prefix}-color-text-disable: rgba(255, 255, 255, 0.3);
+  --#{$prefix}-color-border: rgba(255, 255, 255, 0.2);
+  --#{$prefix}-color-divider: rgba(255, 255, 255, 0.12);
+  --#{$prefix}-color-bg: rgba(255, 255, 255, 0.08);
+  --#{$prefix}-color-table-header: rgba(255, 255, 255, 0.04);
+  --#{$prefix}-color-lighter: var(--#{$prefix}-gray-9);
+  --#{$prefix}-color-light: var(--#{$prefix}-gray-8);
 }
