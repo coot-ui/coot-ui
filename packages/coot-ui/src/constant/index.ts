@@ -1,1 +1,6 @@
-export type ComponentSize = 'default' | 'small' | 'mini' | 'large';
+export enum ComponentSize {
+  Default = 'default',
+  Small = 'small',
+  Mini = 'mini',
+  Large = 'large',
+}

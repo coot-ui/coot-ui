@@ -32,9 +32,11 @@ export class CootRipple {
   }
 
   init(target: HTMLElement) {
-    this.checkTargetPosition(target);
-    this.appendRippleContainerToTarget(target);
-    this.addListenerToTarget(target);
+    if (target) {
+      this.checkTargetPosition(target);
+      this.appendRippleContainerToTarget(target);
+      this.addListenerToTarget(target);
+    }
   }
 
   // check that the position of target cann't be static

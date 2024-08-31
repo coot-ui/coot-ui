@@ -14,13 +14,13 @@ import { ButtonType, ButtonStatus, ButtonSize } from './type';
 @defineElement('coot-button')
 export class CootButton extends LitElement {
   @property({ type: String })
-  type: ButtonType = 'default';
+  type: ButtonType = ButtonType.Default;
 
   @property({ type: String })
-  status: ButtonStatus = 'primary';
+  status: ButtonStatus = ButtonStatus.Primary;
 
   @property({ type: String })
-  size: ButtonSize = 'default';
+  size: ButtonSize = ButtonSize.Default;
 
   @property({ type: Boolean })
   round = false;

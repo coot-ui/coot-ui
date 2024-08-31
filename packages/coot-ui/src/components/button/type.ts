@@ -1,13 +1,24 @@
-import type { ComponentSize } from '@/constant';
+import { ComponentSize } from '@/constant';
 
-export type ButtonType =
-  | 'default'
-  | 'primary'
-  | 'secondary'
-  | 'dashed'
-  | 'text'
-  | 'link';
+export enum ButtonType {
+  Default = 'default',
+  Primary = 'primary',
+  Secondary = 'secondary',
+  Dashed = 'dashed',
+  Text = 'text',
+  Link = 'link',
+}
 
-export type ButtonStatus = 'primary' | 'success' | 'warning' | 'error';
+export enum ButtonStatus {
+  Primary = 'primary',
+  Success = 'success',
+  Warning = 'warning',
+  Error = 'error',
+}
 
-export type ButtonSize = ComponentSize;
+export enum ButtonSize {
+  Default = ComponentSize.Default,
+  Small = ComponentSize.Small,
+  Mini = ComponentSize.Mini,
+  Large = ComponentSize.Large,
+}

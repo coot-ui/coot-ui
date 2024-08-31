@@ -138,7 +138,7 @@ $button-type: primary, secondary, dashed, link, text;
         border-color: var(--button-#{$status});
       }
 
-      &.#{$prefix}-button-type-link {
+      &.#{$prefix}-button-type-link:not(.#{$prefix}-is-disabled) {
         &:hover {
           color: var(--button-#{$status}-hover);
           border-color: var(--button-#{$status}-hover);
@@ -165,7 +165,7 @@ $button-type: primary, secondary, dashed, link, text;
         background-color: var(--button-#{$status});
         &:hover {
           color: white;
-          background-color: var(--button-#{$status}-hover);
+          background-color: var(--button-#{$status}-active);
         }
         @include when(disabled) {
           &,
